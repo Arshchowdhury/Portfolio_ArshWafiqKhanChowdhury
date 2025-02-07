@@ -3,3 +3,7 @@
 
 #### Content:
 
+#####  1. T19A - Group 5: Heart Disease Prediction data 
+________________________________________________________
+  ##### *The following python code was used to build machine learning models in order to attain the best plausible prediction rates based on precision, recall and accuracy rates. Some of the models explored include - Decision Tree, XGB Classifier, Ada Boost, ANN (Artificial Neural Networks), Logistic Regression*
+  
