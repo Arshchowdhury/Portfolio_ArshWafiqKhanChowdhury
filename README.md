@@ -1,4 +1,5 @@
-<img width="468" height="56" alt="image" src="https://github.com/user-attachments/assets/ee0c5ab6-4939-4bf7-929b-075c148a5566" /># Portfolio of Arsh Wafiq Khan Chowdhury
+# Data Analysis portfolio of Arsh Wafiq Khan Chowdhury
+
 ### This is a portfolio compiling all my work - from my postgraduate courses and self inititated learning. The following is description of each file, such that it is easier for the viewer to navigate.
 
 #### Content:
@@ -16,3 +17,7 @@ ____________________________________________________________
 ____________________________________________________________
 #### *The code utilises Logistic Regression and Random Forest supervised learning models to determine relevant factors that contribute to increased demand for a certain produc* 
 
+
+
+# Links 
+- ####[Linkedin]([url](https://www.linkedin.com/in/arsh-wafiq-khan-chowdhury/))
