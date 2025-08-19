@@ -20,4 +20,4 @@ ____________________________________________________________
 
 
 # Links 
-- ####[Linkedin]([url](https://www.linkedin.com/in/arsh-wafiq-khan-chowdhury/))
+- #### [Linkedin](https://www.linkedin.com/in/arsh-wafiq-khan-chowdhury/)
