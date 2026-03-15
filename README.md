@@ -10,7 +10,7 @@ in Sydney.
 
 📧 arshwafiq@gmail.com
 🔗 linkedin.com/in/arsh-wafiq-khan-chowdhury
-📍 Sydney, NSW — Full 485 work rights to January 2028
+📍 Sydney, NSW — Full 485 work right
 
 ---
 
