@@ -1,0 +1,349 @@
+# Solution Design Document
+## Greenfield Aged Care — Microsoft 365 Digital Transformation
+
+**Prepared by:** Arsh Wafiq Khan Chowdhury — Technology Consultant, Sydney NSW  
+**Date:** March 2026 · **Version:** 1.0  
+**Stack:** Microsoft Power Platform · Azure AD · Power BI · SharePoint Online · Teams  
+**Classification:** Portfolio artefact — fictional client scenario
+
+> This document demonstrates end-to-end consulting methodology: requirements analysis, option assessment, architecture design, and implementation planning across a Microsoft Power Platform engagement.
+
+---
+
+## ROI Summary
+
+| Metric | Value |
+|---|---|
+| **Annual Benefit** | $31,200 in recovered staff time |
+| **Year 1 Cost** | $81,000 (implementation + licences) |
+| **Payback Period** | 17 months |
+| **5-Year ROI** | ~247% |
+
+---
+
+## Table of Contents
+
+1. [Executive Summary](#1-executive-summary)
+2. [Client Overview](#2-client-overview)
+3. [Current State Assessment](#3-current-state-assessment)
+4. [Requirements](#4-requirements)
+5. [Solution Options](#5-solution-options)
+6. [Recommended Solution & Architecture](#6-recommended-solution--architecture)
+7. [Implementation Roadmap](#7-implementation-roadmap)
+8. [Risks & Mitigations](#8-risks--mitigations)
+9. [Next Steps](#9-next-steps)
+
+---
+
+## 1. Executive Summary
+
+Greenfield Aged Care operates across three Sydney locations with 150 staff currently reliant on paper forms, Excel spreadsheets, and informal communication channels for rostering, incident reporting, and family updates.
+
+This document recommends a phased **Microsoft Power Platform implementation** that leverages the organisation's existing Microsoft 365 E3 investment to digitise these processes, reduce administrative overhead, and address compliance risk under the Aged Care Quality Standards.
+
+The recommended solution delivers a **20-week implementation roadmap** with an estimated first-year cost of $81,000, a projected annual benefit of $31,200 in recovered staff time, and a full payback period of 17 months.
+
+**Why Power Platform?** The organisation already holds Microsoft 365 E3 licences. Power Platform extends that investment rather than displacing it, keeps the ICT Manager in control post-handover, and delivers in 3–4 months — well within the 6-month go-live target. No new vendor relationship required.
+
+---
+
+## 2. Client Overview
+
+| Attribute | Detail |
+|---|---|
+| **Organisation** | Greenfield Aged Care (Fictional) |
+| **Staff** | 150 across 3 locations: Sydney CBD, Parramatta, Penrith |
+| **Existing Technology** | Microsoft 365 E3 licences, Windows devices |
+| **Power Platform** | Licences not yet active — within budget scope to add |
+| **Current State** | Paper-based and Excel-driven operations across all core processes |
+| **Engagement Type** | Digital Transformation — Requirements through to Delivery |
+
+### Stakeholder Map
+
+| Stakeholder | Role | Primary Interest |
+|---|---|---|
+| CEO | Executive Sponsor | ROI, compliance risk reduction |
+| Operations Manager | Process Owner — Rostering | Efficiency, accuracy, time saving |
+| Clinical Lead | Process Owner — Incidents | Real-time visibility, audit trail |
+| ICT Manager | Technical Owner | Supportability, integration, security |
+| Frontline Care Workers | Primary End Users | Ease of use, mobile access |
+| Residents' Families | External Users | Timely, consistent communication |
+
+---
+
+## 3. Current State Assessment
+
+A structured discovery process identified three core operational areas without integrated digital support. Each carries measurable inefficiency and compliance risk.
+
+### Pain Points Summary
+
+| Process | Key Pain Point | Business Impact | Risk Level |
+|---|---|---|---|
+| **Rostering** | Manual Excel, changes via WhatsApp, no conflict detection | 3 hrs/week admin, frequent errors | 🟡 Medium |
+| **Incident Reporting** | Paper forms scanned and emailed, 48-hour lag to management | Audit risk, compliance exposure | 🔴 High |
+| **Family Communication** | Phone, email, notice boards — no consistent channel or audit trail | Aged Care Quality Standards risk | 🔴 High |
+
+### Rostering — Detail
+
+- Managed via Excel spreadsheets, updated manually by the Operations Manager
+- No automated conflict detection or integration with leave management
+- Roster changes communicated via WhatsApp — no audit trail
+- Estimated **3 hours per week** in manual administration
+
+### Incident Reporting — Detail
+
+- Paper forms completed at point of care, scanned and emailed to Clinical Lead
+- No centralised tracking, escalation workflow, or acknowledgement mechanism
+- Average **48-hour lag** between incident and management visibility
+- Audit risk: incomplete paper trails under Aged Care Quality Standards
+
+### Family Communication — Detail
+
+- Mix of phone calls, email, and physical notice boards — no consistent channel
+- No audit trail for what was communicated to which family and when
+- Families report feeling uninformed, impacting satisfaction and compliance scores
+
+---
+
+## 4. Requirements
+
+### 4.1 Functional Requirements
+
+| ID | Requirement | Priority | Source |
+|---|---|---|---|
+| FR-01 | Staff can view and acknowledge rosters on mobile devices | Must Have | Operations Manager |
+| FR-02 | Automated conflict detection for roster clashes and leave | Must Have | Operations Manager |
+| FR-03 | Digital incident reporting form with mandatory fields and photo upload | Must Have | Clinical Lead |
+| FR-04 | Automatic escalation when incident not acknowledged within 2 hours | Must Have | Clinical Lead |
+| FR-05 | Immutable audit trail for all incident reports | Must Have | Compliance |
+| FR-06 | Power BI dashboard: open incidents by location and severity | Should Have | Clinical Lead |
+| FR-07 | Family portal for resident updates and communication log | Should Have | CEO |
+| FR-08 | Single sign-on via existing Microsoft 365 identity (Azure AD) | Must Have | ICT Manager |
+
+### 4.2 Non-Functional Requirements
+
+| ID | Category | Requirement |
+|---|---|---|
+| NFR-01 | Accessibility | Family portal must meet WCAG 2.1 AA standard |
+| NFR-02 | Mobile | All staff-facing apps must function on iOS and Android |
+| NFR-03 | Data Sovereignty | All data must remain within Microsoft Australia datacentres |
+| NFR-04 | Training | Frontline staff onboarding completable in under 2 hours |
+| NFR-05 | Supportability | ICT Manager can make configuration changes without vendor involvement |
+
+### 4.3 Constraints & Assumptions
+
+- Organisation holds Microsoft 365 E3 licences. Power Platform per-user licences are within approved budget scope
+- No custom development budget — all solutions must use configuration over code where possible
+- Go-live target is 6 months from project start date
+- All 150 staff have active Microsoft 365 accounts and can be provisioned for Power Platform
+- ICT Manager has or will obtain Power Platform Administrator certification within Phase 1
+
+---
+
+## 5. Solution Options
+
+Three options were assessed against functional requirements, cost, implementation timeline, and long-term supportability.
+
+### Option 1: Microsoft Power Platform ⭐ Recommended
+
+**Components:** Power Apps Canvas (rostering + incident reporting), Power Automate (flows + escalation), SharePoint Online (data layer), Power BI (reporting), Teams (family portal), Azure AD (identity)
+
+**Advantages**
+- Fully within existing Microsoft 365 ecosystem — no new vendor relationship
+- ICT Manager can support and maintain independently after handover
+- Rapid implementation via configuration, not custom code
+- Scales across all three locations with no architecture change
+- Proportional per-user licensing as organisation grows
+
+**Considerations**
+- Requires Power Apps per-user licences (~$20 AUD/user/month)
+- ICT Manager will require Power Platform upskilling
+
+**Estimated Year 1 Cost:** $45,000 implementation + $3,000/month licences = ~$81,000
+
+---
+
+### Option 2: Third-Party Aged Care Platform (e.g. Inerva, AlayaCare)
+
+**Components:** Purpose-built aged care SaaS platform replacing all current processes
+
+**Advantages**
+- Pre-built workflows specific to aged care compliance requirements
+- Vendor-managed updates, security patches, and compliance alignment
+
+**Considerations**
+- Typically $80,000–$150,000 implementation plus $8,000/month ongoing
+- Implementation timeline of 9–12 months — **misses the 6-month go-live target**
+- Duplicates Microsoft 365 investment already made by the organisation
+- Adds external vendor dependency, complicating data sovereignty
+
+**Estimated Year 1 Cost:** ~$216,000
+
+---
+
+### Option 3: Enhanced SharePoint & Excel (Minimal Investment)
+
+**Components:** SharePoint Online lists replacing Excel files, Power Automate basic notification flows
+
+**Advantages**
+- Lowest cost — no additional licences required
+- Fastest to implement: 4–6 weeks
+
+**Considerations**
+- Does not solve mobile access requirement for frontline staff
+- No structured incident reporting workflow or escalation capability
+- No family communication solution
+- Addresses symptoms rather than root causes — high reversion risk within 12 months
+
+**Estimated Year 1 Cost:** ~$15,000
+
+---
+
+### Options Comparison Matrix
+
+| Criteria | Option 1: Power Platform | Option 2: Third-Party | Option 3: SharePoint |
+|---|---|---|---|
+| Year 1 Cost | **$81,000** | $216,000 | $15,000 |
+| Time to Value | **3–4 months** | 9–12 months | 4–6 weeks |
+| Compliance Coverage | High | Very High | Medium |
+| Supportability | High | Medium | High |
+| Mobile Access | Full iOS & Android | Full | Limited |
+| Ecosystem Fit | Excellent | Poor | Good |
+| Scalability | High | High | Low |
+| **Recommended** | **✅ YES** | ❌ NO | ❌ NO |
+
+---
+
+## 6. Recommended Solution & Architecture
+
+**Option 1 — Microsoft Power Platform** is the recommended approach, driven by four factors:
+
+1. Ecosystem alignment with the existing Microsoft 365 investment
+2. Independent supportability by the ICT Manager post-handover
+3. 3–4 month implementation timeline meeting the 6-month go-live target
+4. Per-user licensing model scaling proportionally with organisational growth
+
+### Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────┐
+│              Azure AD / Entra ID                     │
+│         Identity & Role-Based Access Control         │
+└──────────┬──────────────────┬───────────────┬────────┘
+           │                  │               │
+    ┌──────▼──────┐    ┌──────▼──────┐  ┌────▼───────┐
+    │ Power Apps  │    │ Power Auto- │  │  Power BI  │
+    │   Canvas    │    │    mate     │  │ Dashboards │
+    │  Rostering  │    │  Flows &    │  │ & Reports  │
+    │  Incidents  │    │ Escalations │  │            │
+    └──────┬──────┘    └──────┬──────┘  └────┬───────┘
+           │                  │               │
+           └──────────────────▼───────────────┘
+                    ┌──────────────┐
+                    │  SharePoint  │
+                    │ Online Lists │
+                    │  Data Layer  │
+                    └──────┬───────┘
+                           │
+                    ┌──────▼───────┐
+                    │    Teams     │
+                    │ Family Portal│
+                    └──────────────┘
+```
+
+*Arrows indicate data and event flows. Azure AD provides identity layer across all components.*
+
+### Component Summary
+
+| Component | Purpose | Technology |
+|---|---|---|
+| Rostering App | Staff roster viewing, acknowledgement, leave requests | Power Apps Canvas |
+| Incident App | Digital incident capture, mandatory fields, photo upload | Power Apps Canvas |
+| Escalation Engine | Auto-escalation when incidents unacknowledged after 2hrs | Power Automate |
+| Notification Service | Roster change alerts and incident status updates | Power Automate + Teams |
+| Data Layer | All structured data with role-based access control | SharePoint Online Lists |
+| Reporting Dashboard | Open incidents, roster compliance, KPIs by location | Power BI |
+| Family Portal | Family updates and communication audit log | Teams (External Access) |
+| Identity & Access | Single sign-on and role-based access control | Azure AD / Entra ID |
+
+---
+
+## 7. Implementation Roadmap
+
+Implementation is structured in three phases, prioritised by compliance risk. Incident reporting is delivered first as it carries the highest clinical governance risk.
+
+### Phase 1 — Foundation: Incident Reporting (Weeks 1–4)
+
+- Azure AD role-based access groups configured for all staff
+- SharePoint data architecture designed and provisioned
+- Incident Reporting App built, configured, and tested
+- Power Automate escalation flows live and tested end-to-end
+- UAT completed with Clinical Lead and frontline staff sample
+
+### Phase 2 — Rostering Automation (Weeks 5–10)
+
+- Rostering App built, configured, and integrated with leave management process
+- Automated roster notifications via Teams deployed
+- Conflict detection and acknowledgement workflows active
+- UAT with Operations Manager across all three locations
+- Data migration from Excel rosters completed
+
+### Phase 3 — Reporting, Family Portal & Go-Live (Weeks 11–20)
+
+- Power BI dashboard built and published to CEO and Clinical Lead
+- Family communication portal piloted with 10 families before full rollout
+- Full staff training delivered across all three locations
+- Go-live and 2-week hypercare period
+- ICT Manager handover and knowledge transfer complete
+
+### Milestone Schedule
+
+| Milestone | Target | Owner | Success Criteria |
+|---|---|---|---|
+| Incident App go-live | Week 4 | Consultant | Zero paper incident forms in use |
+| Rostering App go-live | Week 10 | Consultant | 100% of rosters managed in app |
+| Reporting live | Week 14 | Consultant | CEO and Clinical Lead using dashboards |
+| Family portal live | Week 16 | Consultant | 10 pilot families onboarded |
+| Hypercare complete | Week 18 | ICT Manager | No open P1/P2 incidents |
+| Full handover | Week 20 | ICT Manager | ICT Manager independently managing platform |
+
+---
+
+## 8. Risks & Mitigations
+
+| Risk | Likelihood | Impact | Mitigation Strategy |
+|---|---|---|---|
+| Staff resistance to digital adoption | 🟡 Medium | 🔴 High | Early stakeholder engagement; UX-first design; phased training in Weeks 15–16 |
+| ICT Manager capacity constraints | 🟡 Medium | 🟡 Medium | Limit ICT involvement to Phase 1 foundation; consultant manages Phase 2–3 build |
+| Data migration complexity from Excel | 🟢 Low | 🟡 Medium | Data mapping exercise in Week 1; phased migration by location |
+| Family portal adoption below target | 🟡 Medium | 🟢 Low | Pilot with 10 families in Week 14 before full rollout |
+| Power Platform licence procurement delay | 🟢 Low | 🔴 High | Initiate procurement in Week 1; identify SharePoint interim fallback |
+| Azure AD configuration errors | 🟢 Low | 🔴 High | Role mapping reviewed with ICT Manager before any app deployment; test environment first |
+
+---
+
+## 9. Next Steps
+
+| # | Action | Owner | Due |
+|---|---|---|---|
+| 1 | Client sign-off on Option 1 recommendation | CEO | End of Week 1 |
+| 2 | Power Platform per-user licence procurement initiated | ICT Manager | Week 1 |
+| 3 | Kick-off workshop scheduled with all key stakeholders | Consultant | Week 1 |
+| 4 | Azure AD role groups and SharePoint architecture designed | ICT Manager + Consultant | Week 2 |
+| 5 | Phase 1 detailed design session and requirements sign-off | Clinical Lead + Consultant | Week 2 |
+
+---
+
+## About This Document
+
+This Solution Design Document is a portfolio artefact prepared by **Arsh Wafiq Khan Chowdhury** to demonstrate end-to-end consulting methodology across a Microsoft Power Platform engagement. It covers structured requirements analysis, multi-option assessment with trade-offs, architecture design, phased implementation planning, and risk management.
+
+The client organisation, Greenfield Aged Care, is entirely fictional. All scenarios, stakeholders, and data are invented for demonstration purposes only.
+
+---
+
+**Arsh Wafiq Khan Chowdhury**  
+Technology Consultant · Sydney, NSW  
+arshwafiq@gmail.com · [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)  
+[github.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury](https://github.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury)
+
