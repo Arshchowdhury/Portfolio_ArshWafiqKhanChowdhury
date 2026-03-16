@@ -23,7 +23,7 @@ University.
 
 My consulting experience spans Power Apps, Power Automate, Azure
 OpenAI, Azure Functions, Azure SQL, Power BI, and Dynamics 365,
-delivered for clients in government and healthcare. I bring both
+delivered for clients in government, healthcare and education. I bring both
 technical depth and the consulting skills that make solutions actually
 land: requirements workshops, solution design documentation, stakeholder
 management, and end-to-end delivery ownership.
