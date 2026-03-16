@@ -144,7 +144,7 @@ A structured discovery process identified three core operational areas without i
 
 Three options were assessed against functional requirements, cost, implementation timeline, and long-term supportability.
 
-### Option 1: Microsoft Power Platform ⭐ Recommended
+### Option 1: Microsoft Power Platform (Recommended).
 
 **Components:** Power Apps Canvas (rostering + incident reporting), Power Automate (flows + escalation), SharePoint Online (data layer), Power BI (reporting), Teams (family portal), Azure AD (identity)
 
