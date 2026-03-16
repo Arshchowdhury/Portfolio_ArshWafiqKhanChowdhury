@@ -1,0 +1,242 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="115%" height="125%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr-blue" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#0078D4"/>
+    </marker>
+    <marker id="arr-grey" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#9CA3AF"/>
+    </marker>
+    <marker id="arr-green" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#00833D"/>
+    </marker>
+    <marker id="arr-gold" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#F2A900"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#6264A7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="#F6F8FA" rx="12"/>
+  <rect width="900" height="4" fill="#0078D4"/>
+  <rect x="0" y="4" width="900" height="44" fill="#0D1B2A"/>
+  <text x="28" y="31" font-size="14" font-weight="700" fill="white">Solution Architecture</text>
+  <text x="28" y="44" font-size="9.5" fill="rgba(255,255,255,0.45)" letter-spacing="0.07em">TRUEFIELD AGED CARE  ·  MICROSOFT POWER PLATFORM  ·  MARCH 2026</text>
+  <rect x="696" y="14" width="186" height="20" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="789" y="28" text-anchor="middle" font-size="8.5" fill="rgba(255,255,255,0.5)">Arsh Wafiq Khan Chowdhury</text>
+
+  <!-- ══ LANE 1: IDENTITY ══ -->
+  <rect x="20" y="60" width="860" height="78" rx="8" fill="#EBF5FF" stroke="#BAD7F5" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="32" y="75" font-size="8.5" font-weight="700" fill="#0078D4" letter-spacing="0.12em">IDENTITY LAYER</text>
+
+  <!-- Azure AD card -->
+  <rect x="310" y="79" width="280" height="50" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="310" y="79" width="280" height="3" rx="2" fill="#0078D4"/>
+  <!-- Microsoft logo (4-square) -->
+  <rect x="325" y="90" width="9" height="9" fill="#F25022"/>
+  <rect x="336" y="90" width="9" height="9" fill="#7FBA00"/>
+  <rect x="325" y="101" width="9" height="9" fill="#00A4EF"/>
+  <rect x="336" y="101" width="9" height="9" fill="#FFB900"/>
+  <text x="354" y="100" font-size="12" font-weight="700" fill="#0D1B2A">Azure AD / Entra ID</text>
+  <text x="354" y="116" font-size="9" fill="#6B7280">Identity · Single Sign-On · Role-Based Access Control</text>
+
+  <!-- Identity flow lines -->
+  <line x1="370" y1="129" x2="135" y2="172" stroke="#0078D4" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-blue)" opacity="0.55"/>
+  <line x1="400" y1="129" x2="340" y2="172" stroke="#0078D4" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-blue)" opacity="0.55"/>
+  <line x1="450" y1="129" x2="530" y2="172" stroke="#0078D4" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-blue)" opacity="0.55"/>
+  <line x1="480" y1="129" x2="720" y2="172" stroke="#0078D4" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-blue)" opacity="0.55"/>
+
+  <!-- ══ LANE 2: PLATFORM ══ -->
+  <rect x="20" y="150" width="860" height="138" rx="8" fill="#FAFBFC" stroke="#E1E8F0" stroke-width="1"/>
+  <text x="32" y="165" font-size="8.5" font-weight="700" fill="#6B7280" letter-spacing="0.12em">PLATFORM LAYER</text>
+
+  <!-- Power Apps -->
+  <rect x="38" y="172" width="172" height="104" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="38" y="172" width="172" height="3" rx="2" fill="#742774"/>
+  <rect x="52" y="183" width="28" height="28" rx="6" fill="#742774"/>
+  <text x="64" y="202" text-anchor="middle" font-size="14" font-weight="900" fill="white">P</text>
+  <text x="88" y="197" font-size="11" font-weight="700" fill="#742774">Power Apps</text>
+  <text x="88" y="210" font-size="9" fill="#9CA3AF">Canvas Applications</text>
+  <text x="52" y="228" font-size="8.5" fill="#6B7280">· Rostering App</text>
+  <text x="52" y="241" font-size="8.5" fill="#6B7280">· Incident Reporting App</text>
+  <text x="52" y="254" font-size="8.5" fill="#6B7280">· Mobile: iOS + Android</text>
+  <text x="52" y="267" font-size="8.5" fill="#6B7280">· SharePoint data integration</text>
+
+  <!-- Power Automate -->
+  <rect x="228" y="172" width="172" height="104" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="228" y="172" width="172" height="3" rx="2" fill="#0F6CBD"/>
+  <rect x="242" y="183" width="28" height="28" rx="6" fill="#0F6CBD"/>
+  <polygon points="260,186 252,198 259,198 254,208 263,196 256,196" fill="white"/>
+  <text x="278" y="197" font-size="11" font-weight="700" fill="#0F6CBD">Power Automate</text>
+  <text x="278" y="210" font-size="9" fill="#9CA3AF">Flows + Escalations</text>
+  <text x="242" y="228" font-size="8.5" fill="#6B7280">· 2hr escalation engine</text>
+  <text x="242" y="241" font-size="8.5" fill="#6B7280">· Roster change alerts</text>
+  <text x="242" y="254" font-size="8.5" fill="#6B7280">· Incident notifications</text>
+  <text x="242" y="267" font-size="8.5" fill="#6B7280">· Teams push messages</text>
+
+  <!-- SharePoint (highlighted as data layer) -->
+  <rect x="418" y="167" width="172" height="113" rx="7" fill="#F0FBF4" filter="url(#shadow)" stroke="#00833D" stroke-width="1.5"/>
+  <rect x="418" y="167" width="172" height="3" rx="2" fill="#00833D"/>
+  <rect x="432" y="179" width="28" height="28" rx="6" fill="#00833D"/>
+  <text x="444" y="198" text-anchor="middle" font-size="15" font-weight="800" fill="white">S</text>
+  <text x="468" y="194" font-size="11" font-weight="700" fill="#00833D">SharePoint</text>
+  <text x="468" y="207" font-size="8.5" font-weight="700" fill="#00833D" letter-spacing="0.06em">DATA LAYER</text>
+  <text x="432" y="226" font-size="8.5" fill="#374151">· All structured data</text>
+  <text x="432" y="239" font-size="8.5" fill="#374151">· Role-based permissions</text>
+  <text x="432" y="252" font-size="8.5" fill="#374151">· Immutable audit trails</text>
+  <text x="432" y="265" font-size="8.5" fill="#374151">· Incident records</text>
+  <text x="432" y="275" font-size="7.5" fill="#9CA3AF">All platform components read/write here</text>
+
+  <!-- Power BI -->
+  <rect x="608" y="172" width="172" height="104" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="608" y="172" width="172" height="3" rx="2" fill="#F2A900"/>
+  <rect x="622" y="183" width="28" height="28" rx="6" fill="#F2A900"/>
+  <rect x="628" y="202" width="4" height="5" fill="white"/>
+  <rect x="634" y="197" width="4" height="10" fill="white" opacity="0.85"/>
+  <rect x="640" y="193" width="4" height="14" fill="white" opacity="0.7"/>
+  <text x="657" y="197" font-size="11" font-weight="700" fill="#B8840A">Power BI</text>
+  <text x="657" y="210" font-size="9" fill="#9CA3AF">Dashboards + Reports</text>
+  <text x="622" y="228" font-size="8.5" fill="#6B7280">· Incident KPIs by location</text>
+  <text x="622" y="241" font-size="8.5" fill="#6B7280">· Roster compliance view</text>
+  <text x="622" y="254" font-size="8.5" fill="#6B7280">· Executive reporting</text>
+  <text x="622" y="267" font-size="8.5" fill="#6B7280">· Near real-time refresh</text>
+
+  <!-- Platform flow arrows -->
+  <path d="M210 224 C270 214 340 214 418 224" fill="none" stroke="#742774" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-green)" opacity="0.55"/>
+  <path d="M400 234 C407 228 414 226 418 230" fill="none" stroke="#0F6CBD" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-green)" opacity="0.55"/>
+  <path d="M590 224 C596 218 603 218 608 224" fill="none" stroke="#00833D" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-gold)" opacity="0.55"/>
+
+  <!-- ══ LANE 3: OUTPUT ══ -->
+  <rect x="20" y="302" width="860" height="128" rx="8" fill="#FAF7FF" stroke="#E8E0F5" stroke-width="1"/>
+  <text x="32" y="317" font-size="8.5" font-weight="700" fill="#6264A7" letter-spacing="0.12em">OUTPUT LAYER</text>
+
+  <!-- Teams / Family Portal -->
+  <rect x="38" y="322" width="180" height="96" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="38" y="322" width="180" height="3" rx="2" fill="#6264A7"/>
+  <rect x="52" y="334" width="28" height="28" rx="6" fill="#6264A7"/>
+  <rect x="57" y="340" width="18" height="3" rx="1.5" fill="white"/>
+  <rect x="63" y="340" width="6" height="15" rx="1.5" fill="white"/>
+  <text x="88" y="349" font-size="11" font-weight="700" fill="#6264A7">Teams</text>
+  <text x="88" y="362" font-size="9" fill="#9CA3AF">Family Portal</text>
+  <text x="52" y="378" font-size="8.5" fill="#6B7280">· External access channel</text>
+  <text x="52" y="391" font-size="8.5" fill="#6B7280">· Resident update posts</text>
+  <text x="52" y="404" font-size="8.5" fill="#6B7280">· Communication audit log</text>
+  <text x="52" y="413" font-size="7.5" fill="#9CA3AF">Managed via Power Automate</text>
+
+  <!-- Staff Mobile output -->
+  <rect x="248" y="322" width="172" height="96" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="248" y="322" width="172" height="3" rx="2" fill="#742774"/>
+  <rect x="262" y="334" width="28" height="28" rx="6" fill="rgba(116,39,116,0.08)" stroke="#742774" stroke-width="1.5"/>
+  <rect x="268" y="336" width="16" height="22" rx="3" fill="none" stroke="#742774" stroke-width="1.5"/>
+  <rect x="273" y="355" width="6" height="1.5" rx="1" fill="#742774"/>
+  <text x="298" y="349" font-size="11" font-weight="700" fill="#742774">Staff Mobile</text>
+  <text x="298" y="362" font-size="9" fill="#9CA3AF">iOS + Android</text>
+  <text x="262" y="378" font-size="8.5" fill="#6B7280">· Roster acknowledgement</text>
+  <text x="262" y="391" font-size="8.5" fill="#6B7280">· Incident submission</text>
+  <text x="262" y="404" font-size="8.5" fill="#6B7280">· Push notifications</text>
+  <text x="262" y="413" font-size="7.5" fill="#9CA3AF">via Power Apps canvas app</text>
+
+  <!-- Management output -->
+  <rect x="450" y="322" width="172" height="96" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="450" y="322" width="172" height="3" rx="2" fill="#F2A900"/>
+  <rect x="464" y="334" width="28" height="28" rx="6" fill="rgba(242,169,0,0.1)" stroke="#F2A900" stroke-width="1.5"/>
+  <rect x="468" y="337" width="20" height="14" rx="2" fill="none" stroke="#F2A900" stroke-width="1.5"/>
+  <rect x="475" y="351" width="6" height="4" rx="1" fill="#F2A900" opacity="0.4"/>
+  <rect x="471" y="340" width="3" height="8" rx="1" fill="#F2A900" opacity="0.7"/>
+  <rect x="476" y="342" width="3" height="6" rx="1" fill="#F2A900" opacity="0.7"/>
+  <rect x="481" y="338" width="3" height="10" rx="1" fill="#F2A900" opacity="0.7"/>
+  <text x="500" y="349" font-size="11" font-weight="700" fill="#B8840A">Management</text>
+  <text x="500" y="362" font-size="9" fill="#9CA3AF">CEO · Clinical · Ops</text>
+  <text x="464" y="378" font-size="8.5" fill="#6B7280">· Real-time dashboards</text>
+  <text x="464" y="391" font-size="8.5" fill="#6B7280">· Incident escalations</text>
+  <text x="464" y="404" font-size="8.5" fill="#6B7280">· Compliance reports</text>
+  <text x="464" y="413" font-size="7.5" fill="#9CA3AF">via Power BI + Power Automate</text>
+
+  <!-- Families output -->
+  <rect x="652" y="322" width="172" height="96" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="652" y="322" width="172" height="3" rx="2" fill="#6264A7"/>
+  <rect x="666" y="334" width="28" height="28" rx="6" fill="rgba(98,100,167,0.08)" stroke="#6264A7" stroke-width="1.5"/>
+  <circle cx="676" cy="344" r="5" fill="none" stroke="#6264A7" stroke-width="1.5"/>
+  <path d="M667 362 Q676 355 685 362" fill="none" stroke="#6264A7" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="686" cy="341" r="3.5" fill="none" stroke="#6264A7" stroke-width="1.2" opacity="0.6"/>
+  <path d="M680 358 Q686 354 692 358" fill="none" stroke="#6264A7" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <text x="701" y="349" font-size="11" font-weight="700" fill="#6264A7">Residents' Families</text>
+  <text x="701" y="362" font-size="9" fill="#9CA3AF">External access</text>
+  <text x="666" y="378" font-size="8.5" fill="#6B7280">· Resident updates</text>
+  <text x="666" y="391" font-size="8.5" fill="#6B7280">· Communication log</text>
+  <text x="666" y="404" font-size="8.5" fill="#6B7280">· WCAG 2.1 AA compliant</text>
+  <text x="666" y="413" font-size="7.5" fill="#9CA3AF">via Teams external channel</text>
+
+  <!-- Output layer vertical connectors -->
+  <!-- Power Automate → Teams (notifications flow) -->
+  <line x1="124" y1="280" x2="104" y2="322" stroke="#0F6CBD" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-purple)" opacity="0.45"/>
+  <!-- Power Apps → Staff Mobile -->
+  <line x1="124" y1="280" x2="310" y2="322" stroke="#742774" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-grey)" opacity="0.45"/>
+  <!-- SharePoint/Power BI → Management (CEO · Clinical · Ops) -->
+  <line x1="504" y1="280" x2="536" y2="322" stroke="#00833D" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-gold)" opacity="0.45"/>
+  <!-- Power BI → Management -->
+  <line x1="694" y1="276" x2="536" y2="322" stroke="#F2A900" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-gold)" opacity="0.45"/>
+  <!-- Teams → Families (external channel) -->
+  <path d="M128 326 C300 290 500 290 738 322" fill="none" stroke="#6264A7" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-purple)" opacity="0.45"/>
+
+  <!-- ══ FLOW STEPS ══ -->
+  <line x1="20" y1="442" x2="880" y2="442" stroke="#E1E8F0" stroke-width="1"/>
+  <text x="28" y="458" font-size="8.5" font-weight="700" fill="#9CA3AF" letter-spacing="0.1em">DATA FLOW</text>
+
+  <!-- Step 1 -->
+  <circle cx="72" cy="474" r="11" fill="#742774"/>
+  <text x="72" y="478" text-anchor="middle" font-size="9.5" font-weight="700" fill="white">1</text>
+  <text x="90" y="470" font-size="9.5" font-weight="600" fill="#374151">Staff submits incident via Power Apps</text>
+  <text x="90" y="482" font-size="8.5" fill="#9CA3AF">Canvas app captures data, writes to SharePoint with timestamp and mandatory fields</text>
+
+  <!-- Step 2 -->
+  <circle cx="72" cy="502" r="11" fill="#0F6CBD"/>
+  <text x="72" y="506" text-anchor="middle" font-size="9.5" font-weight="700" fill="white">2</text>
+  <text x="90" y="498" font-size="9.5" font-weight="600" fill="#374151">Power Automate monitors for unacknowledged incidents</text>
+  <text x="90" y="510" font-size="8.5" fill="#9CA3AF">Escalation flow triggers after 2 hours, sends Teams alert to Clinical Lead</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="448" x2="450" y2="520" stroke="#E1E8F0" stroke-width="1"/>
+
+  <!-- Step 3 -->
+  <circle cx="472" cy="474" r="11" fill="#F2A900"/>
+  <text x="472" y="478" text-anchor="middle" font-size="9.5" font-weight="700" fill="white">3</text>
+  <text x="490" y="470" font-size="9.5" font-weight="600" fill="#374151">Power BI surfaces live KPIs to management</text>
+  <text x="490" y="482" font-size="8.5" fill="#9CA3AF">Dashboard reads from SharePoint, near real-time refresh for CEO and Clinical Lead</text>
+
+  <!-- Step 4 -->
+  <circle cx="472" cy="502" r="11" fill="#6264A7"/>
+  <text x="472" y="506" text-anchor="middle" font-size="9.5" font-weight="700" fill="white">4</text>
+  <text x="490" y="498" font-size="9.5" font-weight="600" fill="#374151">Families receive updates via Teams portal</text>
+  <text x="490" y="510" font-size="8.5" fill="#9CA3AF">External Teams channel provides communication history and full audit trail</text>
+
+  <!-- ══ LEGEND FOOTER ══ -->
+  <line x1="20" y1="526" x2="880" y2="526" stroke="#E1E8F0" stroke-width="1"/>
+  <text x="28" y="544" font-size="8.5" font-weight="700" fill="#9CA3AF" letter-spacing="0.1em">LEGEND</text>
+  <line x1="80" y1="541" x2="106" y2="541" stroke="#0078D4" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="110" y="545" font-size="8.5" fill="#6B7280">Identity / SSO</text>
+  <line x1="182" y1="541" x2="208" y2="541" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="212" y="545" font-size="8.5" fill="#6B7280">Data flow</text>
+  <rect x="272" y="535" width="10" height="10" rx="2" fill="#742774"/>
+  <text x="286" y="545" font-size="8.5" fill="#6B7280">Power Apps</text>
+  <rect x="354" y="535" width="10" height="10" rx="2" fill="#0F6CBD"/>
+  <text x="368" y="545" font-size="8.5" fill="#6B7280">Power Automate</text>
+  <rect x="454" y="535" width="10" height="10" rx="2" fill="#00833D"/>
+  <text x="468" y="545" font-size="8.5" fill="#6B7280">SharePoint</text>
+  <rect x="524" y="535" width="10" height="10" rx="2" fill="#F2A900"/>
+  <text x="538" y="545" font-size="8.5" fill="#6B7280">Power BI</text>
+  <rect x="586" y="535" width="10" height="10" rx="2" fill="#6264A7"/>
+  <text x="600" y="545" font-size="8.5" fill="#6B7280">Teams</text>
+  <rect x="644" y="535" width="10" height="10" rx="2" fill="#0078D4"/>
+  <text x="658" y="545" font-size="8.5" fill="#6B7280">Azure AD</text>
+  <text x="800" y="545" font-size="8.5" fill="#C9D1D9">Portfolio · Arsh Chowdhury · 2026</text>
+
+</svg>
