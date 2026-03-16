@@ -81,9 +81,77 @@ Python script calling OpenAI API, deployed as an Azure Function, triggered by Po
 
 **Selected approach: Option 2 — Azure OpenAI via Power Automate HTTP Connector**
 
-### Architecture
+# Automation Flow — Power Automate + Azure OpenAI
 
-![Automation Flow Architecture](automation-flow.svg)
+## Document Processing Architecture
+
+```mermaid
+flowchart TD
+    %% ── TRIGGER ──────────────────────────────────────
+    SP([📄 New Document Uploaded<br/>SharePoint Library])
+    EM([📧 Email with Attachment<br/>Outlook / Exchange])
+
+    %% ── PROCESSING ───────────────────────────────────
+    GET[⚡ Get File Content<br/>Retrieve document as plain text<br/>Power Automate action]
+
+    HTTP[🤖 Azure OpenAI API Call<br/>HTTP POST to GPT-4o<br/>Structured extraction prompt<br/>Returns JSON response]
+
+    PARSE[🔍 Parse JSON Response<br/>Extract field values<br/>Read confidence scores per field<br/>Power Automate action]
+
+    COND{Confidence Check<br/>All fields<br/>high or medium?}
+
+    %% ── HIGH CONFIDENCE PATH ─────────────────────────
+    AUTO[✅ Auto-Populate SharePoint<br/>Create list item<br/>All extracted fields written<br/>Status: Processed]
+
+    %% ── LOW CONFIDENCE PATH ──────────────────────────
+    FLAG[⚠️ Flag for Human Review<br/>Create list item<br/>Extracted values + review flag<br/>Status: Needs Review]
+
+    %% ── NOTIFICATION ─────────────────────────────────
+    TEAMS_AUTO[💬 Teams Notification<br/>Document processed automatically<br/>Please verify the extracted values]
+
+    TEAMS_FLAG[💬 Teams Notification<br/>Low confidence detected<br/>Please review and correct values<br/>Link to original document]
+
+    %% ── COMPLETE ─────────────────────────────────────
+    DONE([✔ Record Complete<br/>Data in SharePoint<br/>Staff notified])
+    REVIEW([✔ Awaiting Review<br/>Flagged in SharePoint<br/>Staff alerted via Teams])
+
+    %% ── FLOW ─────────────────────────────────────────
+    SP --> GET
+    EM --> GET
+    GET --> HTTP
+    HTTP --> PARSE
+    PARSE --> COND
+
+    COND -- YES: High / Medium --> AUTO
+    COND -- NO: Low confidence --> FLAG
+
+    AUTO --> TEAMS_AUTO
+    FLAG --> TEAMS_FLAG
+
+    TEAMS_AUTO --> DONE
+    TEAMS_FLAG --> REVIEW
+
+    %% ── STYLES ───────────────────────────────────────
+    classDef trigger    fill:#D1FAE5,stroke:#059669,stroke-width:2px,color:#065F46
+    classDef process    fill:#DBEAFE,stroke:#2563EB,stroke-width:1.5px,color:#1E3A5F
+    classDef openai     fill:#EFF6FF,stroke:#0078D4,stroke-width:2px,color:#1E3A5F
+    classDef condition  fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#78350F
+    classDef autopath   fill:#D1FAE5,stroke:#059669,stroke-width:1.5px,color:#065F46
+    classDef flagpath   fill:#FEF3C7,stroke:#D97706,stroke-width:1.5px,color:#78350F
+    classDef notify     fill:#EDE9FE,stroke:#6264A7,stroke-width:1.5px,color:#3730A3
+    classDef terminal   fill:#F3F4F6,stroke:#9CA3AF,stroke-width:1.5px,color:#374151
+
+    class SP,EM trigger
+    class GET,PARSE process
+    class HTTP openai
+    class COND condition
+    class AUTO autopath
+    class FLAG flagpath
+    class TEAMS_AUTO,TEAMS_FLAG notify
+    class DONE,REVIEW terminal
+```
+
+---
 
 ### How It Works — Step by Step
 
