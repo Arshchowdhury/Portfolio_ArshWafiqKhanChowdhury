@@ -1,5 +1,5 @@
 # Solution Design Document
-## Greenfield Aged Care — Microsoft 365 Digital Transformation
+## TrueField Aged Care — Microsoft 365 Digital Transformation
 
 **Prepared by:** Arsh Wafiq Khan Chowdhury — Technology Consultant, Sydney NSW  
 **Date:** March 2026 · **Version:** 1.0  
@@ -37,7 +37,7 @@
 
 ## 1. Executive Summary
 
-Greenfield Aged Care operates across three Sydney locations with 150 staff currently reliant on paper forms, Excel spreadsheets, and informal communication channels for rostering, incident reporting, and family updates.
+TrueField Aged Care operates across three Sydney locations with 150 staff currently reliant on paper forms, Excel spreadsheets, and informal communication channels for rostering, incident reporting, and family updates.
 
 This document recommends a phased **Microsoft Power Platform implementation** that leverages the organisation's existing Microsoft 365 E3 investment to digitise these processes, reduce administrative overhead, and address compliance risk under the Aged Care Quality Standards.
 
@@ -51,7 +51,7 @@ The recommended solution delivers a **20-week implementation roadmap** with an e
 
 | Attribute | Detail |
 |---|---|
-| **Organisation** | Greenfield Aged Care (Fictional) |
+| **Organisation** | TrueField Aged Care (Fictional) |
 | **Staff** | 150 across 3 locations: Sydney CBD, Parramatta, Penrith |
 | **Existing Technology** | Microsoft 365 E3 licences, Windows devices |
 | **Power Platform** | Licences not yet active — within budget scope to add |
@@ -336,9 +336,9 @@ Implementation is structured in three phases, prioritised by compliance risk. In
 
 ## About This Document
 
-This Solution Design Document is a portfolio artefact prepared by **Arsh Wafiq Khan Chowdhury** to demonstrate end-to-end consulting methodology across a Microsoft Power Platform engagement. It covers structured requirements analysis, multi-option assessment with trade-offs, architecture design, phased implementation planning, and risk management.
+This Solution Design Document is a portfolio artefact prepared by **Arsh Chowdhury** to demonstrate end-to-end consulting methodology across a Microsoft Power Platform engagement. It covers structured requirements analysis, multi-option assessment with trade-offs, architecture design, phased implementation planning, and risk management.
 
-The client organisation, Greenfield Aged Care, is entirely fictional. All scenarios, stakeholders, and data are invented for demonstration purposes only.
+The client organisation, TrueField Aged Care, is fictional. All scenarios, stakeholders, and data are invented for demonstration purposes only.
 
 ---
 
