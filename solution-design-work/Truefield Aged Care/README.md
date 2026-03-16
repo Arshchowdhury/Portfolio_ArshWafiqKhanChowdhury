@@ -225,31 +225,7 @@ Three options were assessed against functional requirements, cost, implementatio
 
 ### Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────┐
-│              Azure AD / Entra ID                     │
-│         Identity & Role-Based Access Control         │
-└──────────┬──────────────────┬───────────────┬────────┘
-           │                  │               │
-    ┌──────▼──────┐    ┌──────▼──────┐  ┌────▼───────┐
-    │ Power Apps  │    │ Power Auto- │  │  Power BI  │
-    │   Canvas    │    │    mate     │  │ Dashboards │
-    │  Rostering  │    │  Flows &    │  │ & Reports  │
-    │  Incidents  │    │ Escalations │  │            │
-    └──────┬──────┘    └──────┬──────┘  └────┬───────┘
-           │                  │               │
-           └──────────────────▼───────────────┘
-                    ┌──────────────┐
-                    │  SharePoint  │
-                    │ Online Lists │
-                    │  Data Layer  │
-                    └──────┬───────┘
-                           │
-                    ┌──────▼───────┐
-                    │    Teams     │
-                    │ Family Portal│
-                    └──────────────┘
-```
+![TrueField Aged Care — Solution Architecture](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/solution-design-work/Truefield%20Aged%20Care/TFAC_SDD_architecture.svg)
 
 *Arrows indicate data and event flows. Azure AD provides identity layer across all components.*
 
