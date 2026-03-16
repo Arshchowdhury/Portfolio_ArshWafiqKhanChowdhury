@@ -1,0 +1,188 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#0078D4"/>
+    </marker>
+    <marker id="arr-green" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#16A34A"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#D97706"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#F6F8FA" rx="12"/>
+  <rect width="900" height="4" fill="#0078D4"/>
+  <rect x="0" y="4" width="900" height="40" fill="#0D1B2A"/>
+  <text x="28" y="28" font-size="13" font-weight="700" fill="white">Automation Flow</text>
+  <text x="28" y="41" font-size="9" fill="rgba(255,255,255,0.45)" letter-spacing="0.07em">POWER AUTOMATE + AZURE OPENAI · DOCUMENT EXTRACTION PROTOTYPE · 2025–2026</text>
+  <rect x="696" y="13" width="186" height="20" rx="10" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="789" y="27" text-anchor="middle" font-size="8.5" fill="rgba(255,255,255,0.5)">Arsh Wafiq Khan Chowdhury</text>
+
+  <!-- Step nodes — horizontal flow -->
+  <!-- Step dimensions: w=110, h=72, gap=18 -->
+  <!-- Total: 7 steps × 110 + 6 × 18 = 770 + 108 = 878, start at x=11 -->
+
+  <!-- Helper: node at x=11,139,267,395,523,651 -->
+
+  <!-- 1: Document arrives -->
+  <rect x="11" y="62" width="110" height="72" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="11" y="62" width="110" height="3" rx="2" fill="#00833D"/>
+  <rect x="20" y="74" width="22" height="22" rx="5" fill="#00833D"/>
+  <text x="29" y="89" text-anchor="middle" font-size="13" font-weight="800" fill="white">S</text>
+  <text x="49" y="83" font-size="9.5" font-weight="700" fill="#00833D">SharePoint</text>
+  <text x="49" y="95" font-size="8.5" fill="#9CA3AF">Document upload</text>
+  <text x="20" y="118" font-size="8" fill="#6B7280">New file triggers</text>
+  <text x="20" y="129" font-size="8" fill="#6B7280">the flow</text>
+  <!-- Step number -->
+  <circle cx="11" cy="62" r="9" fill="#00833D"/>
+  <text x="11" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">1</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="121" y1="98" x2="139" y2="98" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 2: Get file content -->
+  <rect x="139" y="62" width="110" height="72" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="139" y="62" width="110" height="3" rx="2" fill="#0F6CBD"/>
+  <rect x="148" y="74" width="22" height="22" rx="5" fill="#0F6CBD"/>
+  <polygon points="156,78 162,85 156,92 162,85" fill="none" stroke="white" stroke-width="1.5"/>
+  <line x1="159" y1="85" x2="167" y2="85" stroke="white" stroke-width="1.5"/>
+  <text x="177" y="83" font-size="9.5" font-weight="700" fill="#0F6CBD">Get Content</text>
+  <text x="177" y="95" font-size="8.5" fill="#9CA3AF">Power Automate</text>
+  <text x="148" y="118" font-size="8" fill="#6B7280">Retrieve doc text</text>
+  <text x="148" y="129" font-size="8" fill="#6B7280">from SharePoint</text>
+  <circle cx="139" cy="62" r="9" fill="#0F6CBD"/>
+  <text x="139" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">2</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="249" y1="98" x2="267" y2="98" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3: Azure OpenAI HTTP call -->
+  <rect x="267" y="62" width="110" height="72" rx="7" fill="#EBF5FF" filter="url(#shadow-sm)" stroke="#0078D4" stroke-width="1.5"/>
+  <rect x="267" y="62" width="110" height="3" rx="2" fill="#0078D4"/>
+  <rect x="276" y="74" width="22" height="22" rx="5" fill="#0078D4"/>
+  <!-- Microsoft logo on Azure OpenAI -->
+  <rect x="279" y="77" width="5" height="5" fill="#F25022"/>
+  <rect x="285" y="77" width="5" height="5" fill="#7FBA00"/>
+  <rect x="279" y="83" width="5" height="5" fill="#00A4EF"/>
+  <rect x="285" y="83" width="5" height="5" fill="#FFB900"/>
+  <text x="305" y="83" font-size="9.5" font-weight="700" fill="#0078D4">Azure OpenAI</text>
+  <text x="305" y="95" font-size="8.5" fill="#9CA3AF">GPT-4o via HTTP</text>
+  <text x="276" y="118" font-size="8" fill="#374151">Extract fields</text>
+  <text x="276" y="129" font-size="8" fill="#374151">Return JSON</text>
+  <circle cx="267" cy="62" r="9" fill="#0078D4"/>
+  <text x="267" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">3</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="377" y1="98" x2="395" y2="98" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 4: Confidence check (diamond shape) -->
+  <rect x="395" y="58" width="110" height="80" rx="7" fill="#FEF9EC" filter="url(#shadow-sm)" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="395" y="58" width="110" height="3" rx="2" fill="#D97706"/>
+  <!-- Diamond icon -->
+  <polygon points="413,70 420,77 413,84 406,77" fill="none" stroke="#D97706" stroke-width="1.5"/>
+  <text x="428" y="76" font-size="9.5" font-weight="700" fill="#D97706">Confidence</text>
+  <text x="428" y="88" font-size="9.5" font-weight="700" fill="#D97706">Check</text>
+  <text x="400" y="108" font-size="8" fill="#374151">Route by AI</text>
+  <text x="400" y="119" font-size="8" fill="#374151">confidence level</text>
+  <text x="400" y="130" font-size="8" fill="#9CA3AF">High/Med vs Low</text>
+  <circle cx="395" cy="58" r="9" fill="#D97706"/>
+  <text x="395" y="62" text-anchor="middle" font-size="8" font-weight="700" fill="white">4</text>
+
+  <!-- Two paths from confidence check -->
+  <!-- High confidence path (straight) -->
+  <line x1="505" y1="88" x2="523" y2="88" stroke="#16A34A" stroke-width="1.5" stroke-dasharray="1,0" marker-end="url(#arr-green)"/>
+  <text x="512" y="83" text-anchor="middle" font-size="7.5" font-weight="600" fill="#16A34A">High</text>
+
+  <!-- Low confidence path (down then right) -->
+  <line x1="450" y1="138" x2="450" y2="200" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-amber)"/>
+  <text x="458" y="175" font-size="7.5" font-weight="600" fill="#D97706">Low confidence</text>
+
+  <!-- 5a: Auto-populate SharePoint (high confidence) -->
+  <rect x="523" y="62" width="110" height="72" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="523" y="62" width="110" height="3" rx="2" fill="#00833D"/>
+  <rect x="532" y="74" width="22" height="22" rx="5" fill="#00833D"/>
+  <text x="541" y="89" text-anchor="middle" font-size="13" font-weight="800" fill="white">S</text>
+  <text x="561" y="83" font-size="9.5" font-weight="700" fill="#00833D">SharePoint</text>
+  <text x="561" y="95" font-size="8.5" fill="#9CA3AF">Create list item</text>
+  <text x="532" y="118" font-size="8" fill="#6B7280">Auto-populate</text>
+  <text x="532" y="129" font-size="8" fill="#6B7280">extracted fields</text>
+  <circle cx="523" cy="62" r="9" fill="#00833D"/>
+  <text x="523" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">5</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="633" y1="98" x2="651" y2="98" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 6: Teams notification -->
+  <rect x="651" y="62" width="110" height="72" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="651" y="62" width="110" height="3" rx="2" fill="#6264A7"/>
+  <rect x="660" y="74" width="22" height="22" rx="5" fill="#6264A7"/>
+  <rect x="665" y="80" width="12" height="3" rx="1.5" fill="white"/>
+  <rect x="669" y="80" width="4" height="11" rx="1.5" fill="white"/>
+  <text x="689" y="83" font-size="9.5" font-weight="700" fill="#6264A7">Teams Alert</text>
+  <text x="689" y="95" font-size="8.5" fill="#9CA3AF">Notify for review</text>
+  <text x="660" y="118" font-size="8" fill="#6B7280">Staff confirms</text>
+  <text x="660" y="129" font-size="8" fill="#6B7280">or corrects</text>
+  <circle cx="651" cy="62" r="9" fill="#6264A7"/>
+  <text x="651" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">6</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="761" y1="98" x2="779" y2="98" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 7: Done -->
+  <rect x="779" y="62" width="110" height="72" rx="7" fill="white" filter="url(#shadow-sm)" stroke="#E1E8F0" stroke-width="1"/>
+  <rect x="779" y="62" width="110" height="3" rx="2" fill="#16A34A"/>
+  <rect x="788" y="74" width="22" height="22" rx="5" fill="#16A34A"/>
+  <path d="M793 85 L797 89 L803 81" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="817" y="83" font-size="9.5" font-weight="700" fill="#16A34A">Complete</text>
+  <text x="817" y="95" font-size="8.5" fill="#9CA3AF">Record processed</text>
+  <text x="788" y="118" font-size="8" fill="#6B7280">Data in SharePoint</text>
+  <text x="788" y="129" font-size="8" fill="#6B7280">Staff notified</text>
+  <circle cx="779" cy="62" r="9" fill="#16A34A"/>
+  <text x="779" y="66" text-anchor="middle" font-size="8" font-weight="700" fill="white">7</text>
+
+  <!-- Low confidence branch: Human Review box -->
+  <rect x="378" y="200" width="144" height="72" rx="7" fill="#FEF9EC" filter="url(#shadow-sm)" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="378" y="200" width="144" height="3" rx="2" fill="#D97706"/>
+  <rect x="390" y="212" width="22" height="22" rx="5" fill="#D97706"/>
+  <!-- Person icon -->
+  <circle cx="401" cy="218" r="4" fill="none" stroke="white" stroke-width="1.5"/>
+  <path d="M393 234 Q401 226 409 234" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="419" y="221" font-size="9.5" font-weight="700" fill="#D97706">Human Review</text>
+  <text x="419" y="233" font-size="8.5" fill="#9CA3AF">Flagged for staff</text>
+  <text x="390" y="252" font-size="8" fill="#374151">Teams alert sent with</text>
+  <text x="390" y="263" font-size="8" fill="#374151">original doc + extracted values</text>
+
+  <!-- Low confidence connects back to Teams alert -->
+  <path d="M522 236 C580 236 651 236 706 134" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-amber)"/>
+  <text x="590" y="230" font-size="7.5" fill="#D97706" font-weight="600">Routes to review</text>
+
+  <!-- Prompt engineering callout box -->
+  <rect x="237" y="175" width="180" height="80" rx="7" fill="#EBF5FF" stroke="#0078D4" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="248" y="192" font-size="8.5" font-weight="700" fill="#0078D4">Prompt Design</text>
+  <text x="248" y="207" font-size="8" fill="#374151">· JSON schema specified upfront</text>
+  <text x="248" y="220" font-size="8" fill="#374151">· Null for missing fields (not guess)</text>
+  <text x="248" y="233" font-size="8" fill="#374151">· Confidence: high / medium / low</text>
+  <text x="248" y="246" font-size="8" fill="#374151">· Iteratively refined via testing</text>
+  <line x1="322" y1="134" x2="322" y2="175" stroke="#0078D4" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <!-- Bottom legend -->
+  <line x1="20" y1="310" x2="880" y2="310" stroke="#E1E8F0" stroke-width="1"/>
+  <text x="28" y="328" font-size="8.5" font-weight="700" fill="#9CA3AF" letter-spacing="0.1em">KEY DECISIONS</text>
+  <rect x="28" y="338" width="8" height="8" rx="2" fill="#0078D4"/>
+  <text x="40" y="346" font-size="8.5" fill="#6B7280">Azure OpenAI over Form Recogniser — handles variable document formats without model training</text>
+  <rect x="28" y="358" width="8" height="8" rx="2" fill="#D97706"/>
+  <text x="40" y="366" font-size="8.5" fill="#6B7280">Confidence routing — staff remain in the loop for ambiguous cases, preserving trust in the system</text>
+  <rect x="28" y="378" width="8" height="8" rx="2" fill="#16A34A"/>
+  <text x="40" y="386" font-size="8.5" fill="#6B7280">SharePoint as output layer — matched existing client tooling, no additional licensing required</text>
+  <text x="800" y="410" font-size="8.5" fill="#C9D1D9">Portfolio · Arsh Chowdhury · 2026</text>
+
+</svg>
