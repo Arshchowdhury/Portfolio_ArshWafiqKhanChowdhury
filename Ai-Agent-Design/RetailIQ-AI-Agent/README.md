@@ -103,6 +103,9 @@ flowchart TD
     class MANAGER,PRICING,CONFIRM notify
 ```
 
+## Solution Architecture 
+
+![Architecture](architecture.svg)
 ---
 
 ## Knowledge Base Configuration
