@@ -1,5 +1,5 @@
 // ============================================================
-// MAIN: Apex Query Assistant — Azure Infrastructure
+// MAIN: FindField Query Assistant — Azure Infrastructure
 // Author: Arsh Wafiq Khan Chowdhury
 // Portfolio: github.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury
 //
@@ -14,7 +14,7 @@
 //
 // Deploy:
 //   az deployment group create \
-//     --resource-group rg-apex-prod \
+//     --resource-group rg-findfield-prod \
 //     --template-file main.bicep \
 //     --parameters @parameters.json
 // ============================================================
@@ -31,7 +31,7 @@ param environment string = 'dev'
 param location string = resourceGroup().location
 
 @description('Project identifier — used in all resource names')
-param projectName string = 'apex'
+param projectName string = 'findfield'
 
 @description('Object ID of the agent application managed identity')
 param agentManagedIdentityObjectId string
@@ -81,7 +81,7 @@ module aiSearch 'modules/aisearch.bicep' = {
     searchServiceName: searchServiceName
     location: location
     sku: searchSku
-    indexName: 'apex-documents'
+    indexName: 'findfield-documents'
     tags: tags
   }
 }
@@ -92,7 +92,7 @@ module storage 'modules/storage.bicep' = {
   params: {
     storageAccountName: storageAccountName
     location: location
-    containerName: 'apex-documents'
+    containerName: 'findfield-documents'
     tags: tags
   }
 }
