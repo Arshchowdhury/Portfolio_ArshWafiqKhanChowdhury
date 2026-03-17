@@ -98,9 +98,6 @@ flowchart TD
 ```
 
 ---
-### Solution Architecture 
-
-![architecture](architecture.svg)
 
 ## Conversation Design
 
