@@ -19,14 +19,14 @@ from config import Config
 @pytest.fixture
 def mock_config():
     return Config(
-        openai_endpoint="https://oai-apex-test.openai.azure.com/",
+        openai_endpoint="https://oai-findfield-test.openai.azure.com/",
         openai_deployment="gpt-4o",
         openai_embedding_deployment="text-embedding-3-large",
         openai_api_version="2024-08-01-preview",
-        search_endpoint="https://srch-apex-test.search.windows.net",
-        search_index_name="apex-documents",
-        storage_account_name="stapextest",
-        storage_container_name="apex-documents",
+        search_endpoint="https://srch-findfield-test.search.windows.net",
+        search_index_name="findfield-documents",
+        storage_account_name="stfindfieldtest",
+        storage_container_name="findfield-documents",
         chunk_size_tokens=512,
         chunk_overlap_tokens=64,
         top_k_results=5,
