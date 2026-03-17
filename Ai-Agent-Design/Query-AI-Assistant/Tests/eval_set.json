@@ -1,0 +1,167 @@
+{
+  "description": "Apex Query Assistant — Evaluation Test Set v1.0",
+  "author": "Arsh Wafiq Khan Chowdhury",
+  "notes": "20 test cases covering in-scope queries, out-of-scope queries, escalation triggers, and edge cases. Run with evaluate.py.",
+  "cases": [
+    {
+      "query": "What is the penalty for a late payment?",
+      "expected_source": "late-payment-policy.pdf",
+      "expected_answer_contains": "penalty",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "How many days do I have before a payment is considered overdue?",
+      "expected_source": "late-payment-policy.pdf",
+      "expected_answer_contains": "days",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What happens if I miss the payment deadline twice in a row?",
+      "expected_source": "late-payment-policy.pdf",
+      "expected_answer_contains": "second",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "How do I update my contact details?",
+      "expected_source": "account-management-guide.pdf",
+      "expected_answer_contains": "contact",
+      "category": "account",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What is the process for disputing a charge?",
+      "expected_source": "dispute-resolution-procedure.pdf",
+      "expected_answer_contains": "dispute",
+      "category": "dispute",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "How long does a dispute resolution take?",
+      "expected_source": "dispute-resolution-procedure.pdf",
+      "expected_answer_contains": "business days",
+      "category": "dispute",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What are the eligibility requirements for a payment plan?",
+      "expected_source": "payment-plan-policy.pdf",
+      "expected_answer_contains": "eligible",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "Can I defer a payment if I am experiencing financial hardship?",
+      "expected_source": "hardship-policy.pdf",
+      "expected_answer_contains": "hardship",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What documents do I need to provide for a hardship application?",
+      "expected_source": "hardship-policy.pdf",
+      "expected_answer_contains": "documents",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "How do I close my account?",
+      "expected_source": "account-management-guide.pdf",
+      "expected_answer_contains": "close",
+      "category": "account",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "I want to speak to a human agent please",
+      "expected_source": "",
+      "expected_answer_contains": "connecting you",
+      "category": "escalation",
+      "should_escalate": true,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "I have a complaint about the service I received",
+      "expected_source": "",
+      "expected_answer_contains": "support team",
+      "category": "escalation",
+      "should_escalate": true,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "Can you look up my account number 12345678?",
+      "expected_source": "",
+      "expected_answer_contains": "support team",
+      "category": "escalation",
+      "should_escalate": true,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "I need legal advice about my contract",
+      "expected_source": "",
+      "expected_answer_contains": "support team",
+      "category": "escalation",
+      "should_escalate": true,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What is the weather forecast for Sydney tomorrow?",
+      "expected_source": "",
+      "expected_answer_contains": "don't have confident information",
+      "category": "out_of_scope",
+      "should_escalate": false,
+      "is_out_of_scope": true
+    },
+    {
+      "query": "Can you write me a poem?",
+      "expected_source": "",
+      "expected_answer_contains": "don't have confident information",
+      "category": "out_of_scope",
+      "should_escalate": false,
+      "is_out_of_scope": true
+    },
+    {
+      "query": "overdue fee policy",
+      "expected_source": "late-payment-policy.pdf",
+      "expected_answer_contains": "fee",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "i forgot to pay what happens now",
+      "expected_source": "late-payment-policy.pdf",
+      "expected_answer_contains": "penalty",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "What are my rights if I disagree with a decision?",
+      "expected_source": "dispute-resolution-procedure.pdf",
+      "expected_answer_contains": "dispute",
+      "category": "dispute",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    },
+    {
+      "query": "Is there a fee to set up a payment plan?",
+      "expected_source": "payment-plan-policy.pdf",
+      "expected_answer_contains": "fee",
+      "category": "payment",
+      "should_escalate": false,
+      "is_out_of_scope": false
+    }
+  ]
+}

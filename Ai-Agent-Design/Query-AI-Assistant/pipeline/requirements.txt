@@ -1,0 +1,30 @@
+# Apex Query Assistant — Python Dependencies
+# Install: pip install -r requirements.txt
+#
+# Core Azure SDKs
+azure-identity==1.17.1              # Managed Identity + Azure AD auth (no hardcoded keys)
+azure-search-documents==11.6.0b4    # Azure AI Search client with vector support
+azure-storage-blob==12.20.0         # Blob Storage document ingestion
+azure-keyvault-secrets==4.8.0       # Key Vault secret retrieval
+openai==1.35.0                      # Azure OpenAI client (embeddings + completions)
+
+# Document processing
+pypdf==4.2.2                        # PDF text extraction
+python-docx==1.1.0                  # Word document extraction
+tiktoken==0.7.0                     # Token counting for chunk size management
+
+# Data and evaluation
+pandas==2.2.2                       # Evaluation results analysis
+numpy==1.26.4                       # Vector operations
+scikit-learn==1.5.0                 # Cosine similarity for eval scoring
+
+# Utilities
+python-dotenv==1.0.1                # .env file loading for local development
+tenacity==8.3.0                     # Retry logic for API calls
+tqdm==4.66.4                        # Progress bars for batch operations
+rich==13.7.1                        # Terminal output formatting
+
+# Notebook support
+jupyter==1.0.0
+ipykernel==6.29.4
+matplotlib==3.9.0                   # Evaluation result visualisation
