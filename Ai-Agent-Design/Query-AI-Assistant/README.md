@@ -1,4 +1,4 @@
-# AI Agent Design: Customer Query Resolution Agent
+# FindField: Customer Query Resolution Agent
 ## Copilot Studio + Azure OpenAI — Knowledge-Grounded NLP Agent
 
 **Prepared by:** Arsh Wafiq Khan Chowdhury — Technology Consultant, Sydney NSW
