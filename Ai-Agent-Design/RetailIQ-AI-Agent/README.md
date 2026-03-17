@@ -105,7 +105,7 @@ flowchart TD
 
 ## Solution Architecture 
 
-![Architecture](architecture.svg)
+![Architecture](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/Ai-Agent-Design/RetailIQ%20AI%20Agent/architecture.svg)
 ---
 
 ## Knowledge Base Configuration
