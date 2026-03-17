@@ -1,7 +1,7 @@
 // ============================================================
 // MODULE: Azure OpenAI
 // Purpose: Deploys Azure OpenAI account and GPT-4o model
-//          deployment for the Apex Query Assistant agent.
+//          deployment for the FindField Query Assistant agent.
 //
 // Business rationale: GPT-4o is selected over GPT-3.5 because
 // complex policy documents require stronger reasoning to
