@@ -1,5 +1,5 @@
 """
-evaluate.py — Apex Query Assistant
+evaluate.py — FindField Query Assistant
 RAG pipeline evaluation: retrieval quality + answer quality scoring.
 
 Runs the eval_set.json test suite against the live pipeline
@@ -197,7 +197,7 @@ class Evaluator:
     def print_report(self, report: EvalReport) -> None:
         """Print a formatted evaluation report to the terminal."""
         print("\n" + "=" * 60)
-        print("APEX QUERY ASSISTANT — EVALUATION REPORT")
+        print("FINDFIELD QUERY ASSISTANT — EVALUATION REPORT")
         print("=" * 60)
         print(f"Total cases:          {report.total_cases}")
         print(f"Passed:               {report.passed} ({report.pass_rate:.1%})")
@@ -262,7 +262,7 @@ if __name__ == "__main__":
 
     logging.basicConfig(level=logging.INFO)
 
-    parser = argparse.ArgumentParser(description="Run Apex RAG evaluation suite")
+    parser = argparse.ArgumentParser(description="Run FindField RAG evaluation suite")
     parser.add_argument("--output", default="eval_results.json", help="Output JSON path")
     parser.add_argument("--key-vault", help="Key Vault URL for production config")
     args = parser.parse_args()
