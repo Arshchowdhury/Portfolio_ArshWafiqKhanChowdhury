@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": { "value": "dev" },
+    "location": { "value": "australiaeast" },
+    "projectName": { "value": "careassist" },
+    "agentManagedIdentityObjectId": { "value": "<replace-with-agent-managed-identity-object-id>" },
+    "indexerManagedIdentityObjectId": { "value": "<replace-with-indexer-managed-identity-object-id>" },
+    "openAiCapacityTpm": { "value": 20 },
+    "searchSku": { "value": "standard" }
+  }
+}
