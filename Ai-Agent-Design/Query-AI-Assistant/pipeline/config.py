@@ -1,5 +1,5 @@
 """
-config.py — Apex Query Assistant
+config.py — FindField Query Assistant
 Environment configuration loader.
 
 Supports two modes:
@@ -117,12 +117,12 @@ def _load_from_key_vault(key_vault_url: str) -> Config:
         return client.get_secret(name).value
 
     return Config(
-        openai_endpoint=get_secret("apex-openai-endpoint"),
-        openai_deployment=get_secret("apex-openai-deployment"),
-        openai_embedding_deployment=get_secret("apex-openai-embedding-deployment"),
+        openai_endpoint=get_secret("finfield-openai-endpoint"),
+        openai_deployment=get_secret("findfield-openai-deployment"),
+        openai_embedding_deployment=get_secret("findfield-openai-embedding-deployment"),
         openai_api_version="2024-08-01-preview",
-        search_endpoint=get_secret("apex-search-endpoint"),
-        search_index_name=get_secret("apex-search-index-name"),
-        storage_account_name=get_secret("apex-storage-account-name"),
-        storage_container_name=get_secret("apex-storage-container-name"),
+        search_endpoint=get_secret("findfield-search-endpoint"),
+        search_index_name=get_secret("findfield-search-index-name"),
+        storage_account_name=get_secret("findfield-storage-account-name"),
+        storage_container_name=get_secret("findfield-storage-container-name"),
     )
