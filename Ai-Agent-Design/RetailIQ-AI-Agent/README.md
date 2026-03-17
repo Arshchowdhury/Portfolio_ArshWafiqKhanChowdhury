@@ -102,10 +102,6 @@ flowchart TD
     class SP sharepoint
     class MANAGER,PRICING,CONFIRM notify
 ```
-
-## Solution Architecture 
-
-![Architecture](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/Ai-Agent-Design/RetailIQ%20AI%20Agent/architecture.svg)
 ---
 
 ## Knowledge Base Configuration
