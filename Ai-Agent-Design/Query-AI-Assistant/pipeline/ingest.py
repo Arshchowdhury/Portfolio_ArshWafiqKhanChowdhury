@@ -1,5 +1,5 @@
 """
-ingest.py — Apex Query Assistant
+ingest.py — FindField Query Assistant
 Document ingestion pipeline: chunk → embed → index.
 
 This module:
@@ -317,7 +317,7 @@ if __name__ == "__main__":
 
     logging.basicConfig(level=logging.INFO)
 
-    parser = argparse.ArgumentParser(description="Apex document ingestion pipeline")
+    parser = argparse.ArgumentParser(description="FindField document ingestion pipeline")
     parser.add_argument("--category", help="Only ingest documents with this category tag")
     parser.add_argument("--key-vault", help="Key Vault URL for production config")
     args = parser.parse_args()
