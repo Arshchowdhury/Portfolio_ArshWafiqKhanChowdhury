@@ -1,7 +1,7 @@
 // ============================================================
 // MODULE: Azure Key Vault
 // Purpose: Centralised secret management for all service
-//          credentials used by the Apex agent pipeline.
+//          credentials used by the FindField agent pipeline.
 //
 // Business rationale: Storing credentials in Key Vault rather
 // than app config or environment variables eliminates the
@@ -83,11 +83,11 @@ resource indexerSecretsReaderRole 'Microsoft.Authorization/roleAssignments@2022-
 // These placeholder names define the expected secret schema.
 //
 // Secrets provisioned externally:
-//   apex-openai-endpoint       — Azure OpenAI endpoint URL
-//   apex-search-endpoint       — Azure AI Search endpoint URL
-//   apex-search-index-name     — Target index name
-//   apex-storage-connection    — Storage account connection (Managed Identity preferred)
-//   apex-copilot-studio-secret — Copilot Studio channel secret
+//   findfield-openai-endpoint       — Azure OpenAI endpoint URL
+//   findfield-search-endpoint       — Azure AI Search endpoint URL
+//   findfield-search-index-name     — Target index name
+//   findfield-storage-connection    — Storage account connection (Managed Identity preferred)
+//   findfield-copilot-studio-secret — Copilot Studio channel secret
 
 // ── Diagnostic Settings ───────────────────────────────────────
 resource diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
