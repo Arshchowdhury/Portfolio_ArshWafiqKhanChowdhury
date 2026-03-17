@@ -1,5 +1,5 @@
 """
-generate.py — Apex Query Assistant
+generate.py — FindField Query Assistant
 RAG generation: retrieval context + GPT-4o → grounded response.
 
 Ties together the retrieval and generation layers.
