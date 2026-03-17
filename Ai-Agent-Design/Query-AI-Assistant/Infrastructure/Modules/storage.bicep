@@ -19,7 +19,7 @@ param storageAccountName string
 param location string
 
 @description('Name of the document container')
-param containerName string = 'apex-documents'
+param containerName string = 'findfield-documents'
 
 @description('Resource tags')
 param tags object = {}
