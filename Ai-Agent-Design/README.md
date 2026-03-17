@@ -9,7 +9,7 @@
 
 | # | Agent | Industry | Primary Problem | Key Technologies |
 |---|---|---|---|---|
-| 01 | [Apex Query Assistant](01-Apex-Query-Assistant/) | Financial Services | Customer policy queries taking 24–48hrs to resolve | RAG · Azure OpenAI · Bicep IaC · Python pipeline |
+| 01 | [FindField Query Assistant](01-FindField-Query-Assistant/) | Financial Services | Customer policy queries taking 24–48hrs to resolve | RAG · Azure OpenAI · Bicep IaC · Python pipeline |
 | 02 | [CareAssist Incident Agent](02-CareAssist-Incident-Agent/) | Aged Care | Clinical incidents not escalated within compliance timeframes | Copilot Studio · Power Automate · Teams · Azure OpenAI |
 | 03 | [RetailIQ Sales Agent](03-RetailIQ-Sales-Agent/) | Retail / eCommerce | Sales team overwhelmed by manual product and pricing queries | RAG · Copilot Studio · Teams · Power Automate · Bicep |
 
