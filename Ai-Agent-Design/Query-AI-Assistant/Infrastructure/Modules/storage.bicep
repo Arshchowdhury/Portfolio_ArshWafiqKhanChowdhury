@@ -80,7 +80,7 @@ resource documentContainer 'Microsoft.Storage/storageAccounts/blobServices/conta
   properties: {
     publicAccess: 'None'
     metadata: {
-      purpose: 'apex-rag-source-documents'
+      purpose: 'findfield-rag-source-documents'
       managedBy: 'ingestion-pipeline'
     }
   }
