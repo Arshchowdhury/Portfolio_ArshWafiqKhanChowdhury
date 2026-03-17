@@ -12,7 +12,7 @@
 
 ## Business Problem
 
-Organisations with large internal knowledge bases — policy libraries, product manuals, compliance documents, procedure guides — face a recurring problem: customers and staff cannot find answers quickly. Support teams spend significant time answering questions that are already documented, and customers experience frustration when they cannot self-serve.
+Organisations with large internal knowledge bases  face a recurring problem: customers and staff cannot find answers quickly. Support teams spend significant time answering questions that are already documented, and customers experience frustration when they cannot self-serve.
 
 **The scenario:** A mid-size financial services firm manages a 400-document policy and procedure library across SharePoint. Front-line staff and customers submit hundreds of repetitive queries per week through email and phone. Average resolution time is 24–48 hours. 60% of queries are answerable from existing documentation.
 
@@ -26,7 +26,7 @@ Organisations with large internal knowledge bases — policy libraries, product 
 
 | Attribute | Detail |
 |---|---|
-| **Agent Name** | Apex Query Assistant |
+| **Agent Name** | FindField Query Assistant |
 | **Platform** | Microsoft Copilot Studio |
 | **Primary Channel** | Embedded web widget + Microsoft Teams |
 | **Knowledge Source** | SharePoint Online document library (400 documents) |
@@ -46,7 +46,7 @@ flowchart TD
     TEAMS([💬 Microsoft Teams<br/>Internal staff channel])
 
     %% ── AGENT CORE ──────────────────────────────────
-    ENTRY[🤖 Copilot Studio<br/>Apex Query Assistant<br/>Greeting + intent detection]
+    ENTRY[🤖 Copilot Studio<br/>FindField Query Assistant<br/>Greeting + intent detection]
 
     %% ── NLP CLASSIFICATION ──────────────────────────
     NLP{Intent Classification<br/>What is the user asking?}
@@ -167,7 +167,7 @@ This preparation step is often overlooked and is the primary reason agent respon
 The agent opens with a short, professional greeting and immediately invites the query. No long preamble. No forced menu navigation.
 
 ```
-Agent: Hi, I'm Apex — your support assistant. I can answer 
+Agent: Hi, I'm FindField — your support assistant. I can answer 
        questions about our policies, procedures, and products 
        using our knowledge library.
 
@@ -238,7 +238,7 @@ it acknowledges the limitation and offers to connect the
 user with a human.
 ```
 
-This prevents the agent from hallucinating answers outside its knowledge domain — a critical governance requirement.
+This prevents the agent from hallucinating answers outside its knowledge domain, addressing a critical governance requirement.
 
 ---
 
@@ -271,7 +271,7 @@ The human agent receives the full conversation context before picking up the que
 |---|---|
 | No account-specific data | Agent has no connection to CRM or account systems — cannot retrieve or display personal data |
 | No legal or financial advice | Explicit system instruction + topic-level out-of-scope handling |
-| Citation required | Every generative response must include source document name — prevents unfounded claims |
+| Citation required | Every generative response must include source document name to prevent unfounded claims |
 | Profanity and abuse detection | Copilot Studio content moderation enabled — abusive interactions logged and escalated |
 | Data retention | Conversation transcripts retained for 90 days per compliance policy, then purged |
 | PII handling | Agent instructed not to ask for or store personal information — escalates to human if PII is volunteered |
