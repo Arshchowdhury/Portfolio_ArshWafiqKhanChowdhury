@@ -1,5 +1,5 @@
 """
-retrieve.py — Apex Query Assistant
+retrieve.py — FindField Query Assistant
 Hybrid retrieval: vector search + semantic ranking.
 
 This module queries Azure AI Search using a hybrid strategy:
@@ -56,7 +56,7 @@ class RetrievalResult:
 
 class RetrievalEngine:
     """
-    Hybrid retrieval engine for the Apex RAG pipeline.
+    Hybrid retrieval engine for the FindField RAG pipeline.
 
     Usage:
         engine = RetrievalEngine(config)
@@ -137,7 +137,7 @@ class RetrievalEngine:
             vector_queries=[vector_query],
             filter=odata_filter,
             query_type=QueryType.SEMANTIC,
-            semantic_configuration_name="apex-semantic-config",
+            semantic_configuration_name="findfield-semantic-config",
             semantic_query=SemanticQuery(query=query),
             highlight_fields="content",
             top=k,
