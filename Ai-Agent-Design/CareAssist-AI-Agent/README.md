@@ -98,6 +98,9 @@ flowchart TD
 ```
 
 ---
+### Solution Architecture 
+
+![Architecture](architecture.svg)
 
 ## Conversation Design
 
@@ -147,6 +150,7 @@ CareAssist: ✅ Incident lodged. Reference: INC-2026-0847
 
             Is there anything else you need to add?
 ```
+
 
 ### Why Conversational Over Form-Based
 
