@@ -1,7 +1,7 @@
 // ============================================================
 // MODULE: Azure AI Search
 // Purpose: Deploys the vector search index that powers the
-//          RAG retrieval layer for the Apex Query Assistant.
+//          RAG retrieval layer for the FindField Query Assistant.
 //
 // Business rationale: Azure AI Search with semantic ranking
 // is chosen over basic keyword search because it understands
@@ -30,7 +30,7 @@ param replicaCount int = 1
 param partitionCount int = 1
 
 @description('Name of the vector search index')
-param indexName string = 'apex-documents'
+param indexName string = 'finfield-documents'
 
 @description('Resource tags')
 param tags object = {}
@@ -102,7 +102,7 @@ var indexSchema = {
     ]
   }
   semanticConfiguration: {
-    name: 'apex-semantic-config'
+    name: 'findfield-semantic-config'
     prioritizedFields: {
       contentFields: [{ fieldName: 'content' }]
       titleField: { fieldName: 'sourceDocument' }
