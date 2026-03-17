@@ -2,7 +2,7 @@
 
 Technology Consultant based in Sydney, specialising in Microsoft Azure, AI agent design, Power Platform, and digital transformation. I work at the intersection of solution architecture and delivery, helping organisations translate complex business problems into working technical solutions.
 
-📧 arshwafiq@gmail.com · 🔗 [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury) · 📍 Sydney, NSW · Full work rights (485 visa, January 2028)
+📧 arshwafiq@gmail.com · 🔗 [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury) · 📍 Sydney, NSW · Full work rights ·
 
 ---
 
