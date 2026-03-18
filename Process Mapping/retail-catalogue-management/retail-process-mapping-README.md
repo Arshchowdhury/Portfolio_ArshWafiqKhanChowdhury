@@ -43,30 +43,10 @@ The result is a catalogue that is routinely out of sync. Customers encounter inc
 
 ### Current State Process Map
 
-```mermaid
-flowchart TD
-    A([Product change required\nnew product / price update / discontinue]) --> B[Buyer or Merchandise Manager\nsends email to Catalogue Manager\nwith change details]
-    B --> C{Email contains\nall required fields?}
-    C -- No --> D[Catalogue Manager emails back\nrequesting missing information\n1–3 day delay]
-    D --> B
-    C -- Yes --> E[Catalogue Manager manually\nupdates eCommerce platform\nShopify admin]
-    E --> F[Catalogue Manager manually\nupdates POS system\nLightspeed]
-    F --> G[Catalogue Manager updates\nmaster Excel spreadsheet\non shared drive]
-    G --> H{Is it a\nprice change?}
-    H -- Yes --> I[Finance Manager manually\nreviews spreadsheet\nno formal approval workflow]
-    H -- No --> J[Catalogue Manager emails\nnew PDF product sheet\nto store managers]
-    I --> J
-    J --> K[Store managers forward PDF\nto sales staff individually]
-    K --> L([Update complete\nNo audit trail\nNo sync verification])
+![Current State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/process-mapping/retail-catalogue-management/01-current-state.svg)
 
-    style A fill:#E5E7EB,stroke:#9CA3AF
-    style L fill:#FEE2E2,stroke:#EF4444
-    style D fill:#FEE2E2,stroke:#EF4444
-    style I fill:#FEE2E2,stroke:#EF4444
-    style E fill:#FEF3C7,stroke:#D97706
-    style F fill:#FEF3C7,stroke:#D97706
-    style G fill:#FEF3C7,stroke:#D97706
-```
+
+---
 
 **Key issues highlighted:**
 - No structured submission — email with free-form content
@@ -108,47 +88,8 @@ flowchart TD
 
 ### Future State Process Map
 
-```mermaid
-flowchart TD
-    A([Product change required\nnew product / price update / discontinue]) --> B[Buyer submits structured\nChange Request in Power Apps\nMandatory field validation\nImage upload supported]
-    B --> C{Change type?}
+![Future State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/process-mapping/retail-catalogue-management/02-future-state.svg)
 
-    C -- Price change --> D[Power Automate routes to\nFinance Manager for approval\nTeams adaptive card]
-    C -- New product --> E[Power Automate routes to\nMerchandise Manager for approval\nTeams adaptive card]
-    C -- Discontinue --> F[Auto-approved with\n24hr notification to stores]
-
-    D --> G{Finance\napproved?}
-    E --> H{Merchandise\napproved?}
-
-    G -- Rejected --> I[Requester notified\nvia Teams\nReason logged]
-    H -- Rejected --> I
-    G -- Approved --> J[SharePoint master\ncatalogue updated\nTimestamp + approver logged]
-    H -- Approved --> J
-    F --> J
-
-    J --> K[Power Automate\ntriggers parallel updates]
-
-    K --> L[Shopify API\neCommerce updated\nwithin 2 hours]
-    K --> M[Lightspeed POS API\nPOS updated\nwithin 2 hours]
-    K --> N[SharePoint product\nreference auto-updated\nVersion history preserved]
-
-    N --> O[Teams notification\nto all store channels\nChange summary posted]
-
-    L --> P[Power BI dashboard\nupdated — change log\napproval times tracked]
-    M --> P
-    O --> P
-
-    P --> Q([Update complete\nFull audit trail\nAll channels in sync])
-
-    style A fill:#E5E7EB,stroke:#9CA3AF
-    style Q fill:#D1FAE5,stroke:#059669
-    style I fill:#FEE2E2,stroke:#EF4444
-    style J fill:#D1FAE5,stroke:#059669
-    style L fill:#DBEAFE,stroke:#3B82F6
-    style M fill:#DBEAFE,stroke:#3B82F6
-    style N fill:#D1FAE5,stroke:#059669
-    style P fill:#DBEAFE,stroke:#3B82F6
-```
 
 ---
 
