@@ -43,7 +43,8 @@ The result is a catalogue that is routinely out of sync. Customers encounter inc
 
 ### Current State Process Map
 
-![Current State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/process-mapping/retail-catalogue-management/01-current-state.svg)
+![Current State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/Process%20Mapping/retail-catalogue-management/01-current-state.svg)
+
 
 
 ---
@@ -88,7 +89,8 @@ The result is a catalogue that is routinely out of sync. Customers encounter inc
 
 ### Future State Process Map
 
-![Future State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/process-mapping/retail-catalogue-management/02-future-state.svg)
+![Future State](https://raw.githubusercontent.com/Arshchowdhury/Portfolio_ArshWafiqKhanChowdhury/main/Process%20Mapping/retail-catalogue-management/02-future-state.svg)
+
 
 
 ---
