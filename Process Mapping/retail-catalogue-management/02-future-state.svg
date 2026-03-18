@@ -1,0 +1,212 @@
+<svg viewBox="0 0 1240 660" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L8.5,3.5 z" fill="#2D3748"/>
+    </marker>
+    <marker id="arr-g" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L8.5,3.5 z" fill="#276749"/>
+    </marker>
+    <marker id="arr-b" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L8.5,3.5 z" fill="#2B6CB0"/>
+    </marker>
+    <filter id="s1" x="-4%" y="-6%" width="110%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#1a202c" flood-opacity="0.10"/>
+    </filter>
+    <filter id="s2" x="-4%" y="-8%" width="112%" height="128%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3.5" flood-color="#1a202c" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1240" height="660" fill="#FAFAF9"/>
+  <rect width="1240" height="6" fill="#276749"/>
+
+  <text x="36" y="34" font-size="16.5" font-weight="800" fill="#1A202C" letter-spacing="-0.3">One Power Apps submission auto-syncs all channels within 2 hrs — full audit trail, real-time staff updates</text>
+  <text x="36" y="52" font-size="10.5" fill="#718096">FUTURE STATE  ·  MERIDIAN HOME &amp; LIVING  ·  RETAIL PRODUCT CATALOGUE MANAGEMENT  ·  March 2026</text>
+  <line x1="36" y1="60" x2="1204" y2="60" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Lane 1: Buyer/Merch — 70–175 -->
+  <rect x="36" y="70" width="112" height="105" rx="3" fill="#F0FFF4" stroke="#9AE6B4" stroke-width="1"/>
+  <text x="92" y="117" text-anchor="middle" font-size="10.5" font-weight="700" fill="#276749" letter-spacing="0.2">BUYER /</text>
+  <text x="92" y="131" text-anchor="middle" font-size="10.5" font-weight="700" fill="#276749" letter-spacing="0.2">MERCH</text>
+  <rect x="148" y="70" width="1056" height="105" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 2: Power Automate — 175–270 -->
+  <rect x="36" y="175" width="112" height="95" rx="3" fill="#EBF8FF" stroke="#90CDF4" stroke-width="1"/>
+  <text x="92" y="215" text-anchor="middle" font-size="10" font-weight="700" fill="#2B6CB0" letter-spacing="0.2">POWER</text>
+  <text x="92" y="229" text-anchor="middle" font-size="10" font-weight="700" fill="#2B6CB0" letter-spacing="0.2">AUTOMATE</text>
+  <rect x="148" y="175" width="1056" height="95" fill="#EBF8FF" stroke="#90CDF4" stroke-width="0.8"/>
+
+  <!-- Lane 3: Approvers — 270–360 -->
+  <rect x="36" y="270" width="112" height="90" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="308" text-anchor="middle" font-size="10" font-weight="700" fill="#2D3748" letter-spacing="0.2">APPROVERS</text>
+  <text x="92" y="322" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4A5568" letter-spacing="0.1">(Finance / Merch)</text>
+  <rect x="148" y="270" width="1056" height="90" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 4: Systems — 360–445 -->
+  <rect x="36" y="360" width="112" height="85" rx="3" fill="#EBF8FF" stroke="#90CDF4" stroke-width="1"/>
+  <text x="92" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#2B6CB0" letter-spacing="0.2">SYSTEMS</text>
+  <text x="92" y="411" text-anchor="middle" font-size="9" font-weight="600" fill="#4A5568">(auto-sync)</text>
+  <rect x="148" y="360" width="1056" height="85" fill="#EBF8FF" stroke="#90CDF4" stroke-width="0.8"/>
+
+  <!-- Lane 5: Stores/Staff — 445–570 -->
+  <rect x="36" y="445" width="112" height="125" rx="3" fill="#F0FFF4" stroke="#9AE6B4" stroke-width="1"/>
+  <text x="92" y="495" text-anchor="middle" font-size="10" font-weight="700" fill="#276749" letter-spacing="0.2">STORES /</text>
+  <text x="92" y="509" text-anchor="middle" font-size="10" font-weight="700" fill="#276749" letter-spacing="0.2">SALES STAFF</text>
+  <rect x="148" y="445" width="1056" height="125" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- ══ PROCESS SHAPES ══ -->
+
+  <!-- START -->
+  <ellipse cx="210" cy="122" rx="45" ry="24" fill="#2D3748" filter="url(#s1)"/>
+  <text x="210" y="118" text-anchor="middle" font-size="9" font-weight="700" fill="white" letter-spacing="0.5">PRODUCT</text>
+  <text x="210" y="130" text-anchor="middle" font-size="8.5" fill="#E2E8F0">change raised</text>
+
+  <line x1="255" y1="122" x2="289" y2="122" stroke="#2D3748" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Step 1: Power Apps form — hero element, emphasised -->
+  <rect x="289" y="98" width="162" height="48" rx="5" fill="#C6F6D5" stroke="#276749" stroke-width="2.2" filter="url(#s2)"/>
+  <text x="370" y="117" text-anchor="middle" font-size="9.5" font-weight="700" fill="#276749">Submit via Power Apps</text>
+  <text x="370" y="130" text-anchor="middle" font-size="8.5" fill="#276749">Structured form · validation</text>
+  <text x="370" y="141" text-anchor="middle" font-size="8" fill="#38A169">✓ All mandatory fields enforced</text>
+
+  <!-- Improvement callout above -->
+  <path d="M370,98 L370,82" stroke="#38A169" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="265" y="67" width="212" height="17" rx="3" fill="#C6F6D5"/>
+  <text x="371" y="79" text-anchor="middle" font-size="8" fill="#276749">✓ Replaces email — no rework loops, all fields validated</text>
+
+  <line x1="451" y1="122" x2="488" y2="122" stroke="#2D3748" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Decision: change type -->
+  <polygon points="522,101 558,122 522,143 486,122" fill="white" stroke="#4A5568" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="522" y="118" text-anchor="middle" font-size="8" fill="#2D3748">Change</text>
+  <text x="522" y="129" text-anchor="middle" font-size="8" fill="#2D3748">type?</text>
+
+  <!-- Discontinue → left to auto-approve -->
+  <text x="398" y="115" font-size="8" fill="#2D3748">Discontinue</text>
+  <path d="M486,122 L420,122 L420,175" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- New product → straight down -->
+  <text x="528" y="160" font-size="8" fill="#2D3748">New</text>
+  <line x1="522" y1="143" x2="522" y2="175" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Price → right and down to Finance -->
+  <text x="567" y="114" font-size="8" fill="#2D3748">Price</text>
+  <path d="M558,114 L638,114 L638,270" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══ POWER AUTOMATE LANE ══ -->
+
+  <!-- Auto-approve box (discontinue) -->
+  <rect x="328" y="189" width="148" height="42" rx="4" fill="#C6F6D5" stroke="#276749" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="402" y="206" text-anchor="middle" font-size="9" fill="#276749" font-weight="600">Auto-approved</text>
+  <text x="402" y="219" text-anchor="middle" font-size="8.5" fill="#38A169">+ 24 hr notification to stores</text>
+
+  <!-- PA routing box (new product) -->
+  <rect x="440" y="189" width="166" height="42" rx="4" fill="#BEE3F8" stroke="#2B6CB0" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="523" y="206" text-anchor="middle" font-size="9" fill="#2B6CB0" font-weight="600">Power Automate routes</text>
+  <text x="523" y="219" text-anchor="middle" font-size="8.5" fill="#2B6CB0">approval by change type</text>
+
+  <!-- Callout on PA lane -->
+  <text x="660" y="205" font-size="8.5" fill="#2B6CB0" font-weight="600">Instant trigger · no manual handoff</text>
+
+  <!-- Connect discontinue arrow to auto-approve -->
+  <path d="M420,175 L402,175 L402,189" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Connect new product to routing box -->
+  <path d="M522,175 L523,175 L523,189" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══ APPROVERS LANE ══ -->
+
+  <!-- Finance approval card -->
+  <rect x="556" y="283" width="158" height="46" rx="4" fill="white" stroke="#38A169" stroke-width="1.7" filter="url(#s1)"/>
+  <text x="635" y="300" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Finance approves</text>
+  <text x="635" y="313" text-anchor="middle" font-size="8.5" fill="#2D3748">via Teams adaptive card</text>
+  <text x="635" y="324" text-anchor="middle" font-size="8" fill="#38A169">✓ Timestamped and logged</text>
+
+  <!-- Merch approval card -->
+  <rect x="734" y="283" width="158" height="46" rx="4" fill="white" stroke="#38A169" stroke-width="1.7" filter="url(#s1)"/>
+  <text x="813" y="300" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Merch Mgr approves</text>
+  <text x="813" y="313" text-anchor="middle" font-size="8.5" fill="#2D3748">via Teams adaptive card</text>
+  <text x="813" y="324" text-anchor="middle" font-size="8" fill="#38A169">✓ Timestamped and logged</text>
+
+  <!-- Audit trail callout -->
+  <path d="M892,306 L932,306" stroke="#38A169" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="932" y="292" width="196" height="28" rx="3" fill="#C6F6D5"/>
+  <text x="1030" y="304" text-anchor="middle" font-size="8" fill="#276749">✓ Full approval audit trail</text>
+  <text x="1030" y="315" text-anchor="middle" font-size="8" fill="#276749">stored in SharePoint · 7-yr retention</text>
+
+  <!-- Price route → Finance -->
+  <line x1="638" y1="270" x2="635" y2="283" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- New product route through PA → Merch: PA box bottom to Merch -->
+  <path d="M523,231 L523,257 L813,257 L813,283" fill="none" stroke="#2D3748" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- Merge both approvals + auto-approve down to Systems -->
+  <path d="M635,329 L635,348 L580,348 L580,360" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <path d="M813,329 L813,348 L580,348" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <!-- Auto-approve independent path down -->
+  <path d="M402,231 L402,348 L580,348" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <line x1="580" y1="348" x2="580" y2="360" stroke="#2D3748" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ══ SYSTEMS LANE ══ -->
+
+  <!-- SharePoint record — emphasised, source of truth -->
+  <rect x="340" y="373" width="148" height="44" rx="4" fill="#C6F6D5" stroke="#276749" stroke-width="2" filter="url(#s2)"/>
+  <text x="414" y="390" text-anchor="middle" font-size="9.5" font-weight="700" fill="#276749">SharePoint record</text>
+  <text x="414" y="403" text-anchor="middle" font-size="8.5" fill="#276749">created — full audit trail</text>
+
+  <!-- Shopify sync -->
+  <rect x="514" y="373" width="128" height="44" rx="4" fill="#BEE3F8" stroke="#2B6CB0" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="578" y="390" text-anchor="middle" font-size="9" fill="#2B6CB0" font-weight="600">Auto-sync Shopify</text>
+  <text x="578" y="403" text-anchor="middle" font-size="8.5" fill="#2B6CB0">&lt;2 hours ✓</text>
+
+  <!-- POS sync -->
+  <rect x="662" y="373" width="136" height="44" rx="4" fill="#BEE3F8" stroke="#2B6CB0" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="730" y="390" text-anchor="middle" font-size="9" fill="#2B6CB0" font-weight="600">Auto-sync Lightspeed</text>
+  <text x="730" y="403" text-anchor="middle" font-size="8.5" fill="#2B6CB0">&lt;2 hours ✓</text>
+
+  <!-- Single entry improvement callout -->
+  <path d="M414,373 L414,358" stroke="#38A169" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="278" y="344" width="272" height="16" rx="3" fill="#C6F6D5"/>
+  <text x="414" y="356" text-anchor="middle" font-size="8" fill="#276749">✓ 1 submission auto-propagates to all 3 systems — no re-entry</text>
+
+  <!-- Connect SharePoint to sync boxes -->
+  <line x1="488" y1="395" x2="514" y2="395" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="642" y1="395" x2="662" y2="395" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ══ STORES / STAFF LANE ══ -->
+
+  <!-- Teams notification -->
+  <rect x="454" y="462" width="168" height="44" rx="4" fill="white" stroke="#38A169" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="538" y="479" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Teams notification</text>
+  <text x="538" y="492" text-anchor="middle" font-size="8.5" fill="#2D3748">to all store channels — real-time</text>
+
+  <!-- Connect sync boxes down to Teams notification -->
+  <path d="M578,417 L578,445 L538,445 L538,462" fill="none" stroke="#2D3748" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M730,417 L730,445 L538,445" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+
+  <!-- SharePoint also connects to stores (for visibility) -->
+  <path d="M414,417 L414,445" fill="none" stroke="#2D3748" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+  <!-- Lag eliminated callout -->
+  <path d="M622,484 L672,484" stroke="#38A169" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="672" y="472" width="182" height="26" rx="3" fill="#C6F6D5"/>
+  <text x="763" y="484" text-anchor="middle" font-size="8" fill="#276749">✓ 24–72 hr lag eliminated</text>
+  <text x="763" y="495" text-anchor="middle" font-size="8" fill="#276749">real-time update via Teams</text>
+
+  <!-- END — positive outcome -->
+  <line x1="538" y1="506" x2="538" y2="530" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="438" y="530" width="200" height="24" rx="12" fill="#276749" filter="url(#s1)"/>
+  <text x="538" y="546" text-anchor="middle" font-size="10" font-weight="700" fill="white">All channels in sync. Same day.</text>
+
+  <!-- ══ FOOTER ══ -->
+  <rect x="36" y="582" width="1168" height="62" rx="4" fill="#F0FFF4" stroke="#9AE6B4" stroke-width="1"/>
+  <text x="55" y="600" font-size="9.5" font-weight="700" fill="#276749" letter-spacing="0.5">MEASURABLE OUTCOMES</text>
+  <line x1="55" y1="604" x2="55" y2="634" stroke="#276749" stroke-width="1.8"/>
+  <text x="68" y="614" font-size="9" fill="#2D3748">① Update turnaround: 4–24 hrs → &lt;2 hrs (approx. 90% reduction)</text>
+  <text x="68" y="628" font-size="9" fill="#2D3748">② Catalogue Manager time on updates: ~4 hrs/week → ~30 min/week (approx. 87% reduction)</text>
+  <line x1="510" y1="604" x2="510" y2="634" stroke="#9AE6B4" stroke-width="1"/>
+  <text x="523" y="614" font-size="9" fill="#2D3748">③ Manual data entry touchpoints: 3× per change → 1× (auto-propagated to all systems)</text>
+  <text x="523" y="628" font-size="9" fill="#2D3748">④ Price change approval audit: none → full timestamped log in SharePoint</text>
+  <line x1="900" y1="604" x2="900" y2="634" stroke="#9AE6B4" stroke-width="1"/>
+  <text x="913" y="614" font-size="9" fill="#2D3748">⑤ Channel sync reliability: ~70% → ~100%</text>
+  <text x="913" y="628" font-size="9" fill="#2D3748">⑥ Staff info lag: 24–72 hrs → real-time</text>
+  <text x="1204" y="654" text-anchor="end" font-size="7.5" fill="#A0AEC0">A. Chowdhury  ·  v1.2  ·  Mar 2026  ·  FS-01</text>
+</svg>

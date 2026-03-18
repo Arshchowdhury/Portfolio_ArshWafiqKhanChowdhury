@@ -1,0 +1,175 @@
+<svg viewBox="0 0 1240 660" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L8.5,3.5 z" fill="#2D3748"/>
+    </marker>
+    <marker id="arr-r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0.5 L0,6.5 L8.5,3.5 z" fill="#C53030"/>
+    </marker>
+    <filter id="s1" x="-4%" y="-6%" width="110%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#1a202c" flood-opacity="0.10"/>
+    </filter>
+    <filter id="s2" x="-4%" y="-8%" width="112%" height="128%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3.5" flood-color="#1a202c" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="1240" height="660" fill="#FAFAF9"/>
+  <rect width="1240" height="6" fill="#C53030"/>
+
+  <text x="36" y="34" font-size="16.5" font-weight="800" fill="#1A202C" letter-spacing="-0.3">Manual catalogue process creates ~4 hrs of avoidable rework and leaves channels out of sync</text>
+  <text x="36" y="52" font-size="10.5" fill="#718096">CURRENT STATE  ·  MERIDIAN HOME &amp; LIVING  ·  RETAIL PRODUCT CATALOGUE MANAGEMENT  ·  March 2026</text>
+  <line x1="36" y1="60" x2="1204" y2="60" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Lane 1: Buyer — 70–175 -->
+  <rect x="36" y="70" width="112" height="105" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="117" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">BUYER /</text>
+  <text x="92" y="131" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">MERCH</text>
+  <rect x="148" y="70" width="1056" height="105" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 2: Cat Mgr — 175–325 -->
+  <rect x="36" y="175" width="112" height="150" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="241" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">CATALOGUE</text>
+  <text x="92" y="255" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">MANAGER</text>
+  <rect x="148" y="175" width="1056" height="150" fill="#FFFFFE" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 3: Finance — 325–415 -->
+  <rect x="36" y="325" width="112" height="90" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="364" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">FINANCE</text>
+  <text x="92" y="378" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">MANAGER</text>
+  <rect x="148" y="325" width="1056" height="90" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 4: Store Mgr — 415–500 -->
+  <rect x="36" y="415" width="112" height="85" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="451" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">STORE</text>
+  <text x="92" y="465" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">MANAGER</text>
+  <rect x="148" y="415" width="1056" height="85" fill="#FFFFFE" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Lane 5: Sales Staff — 500–570 -->
+  <rect x="36" y="500" width="112" height="70" rx="3" fill="#F7FAFC" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="92" y="537" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">SALES</text>
+  <text x="92" y="551" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2D3748" letter-spacing="0.2">STAFF</text>
+  <rect x="148" y="500" width="1056" height="70" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- START -->
+  <ellipse cx="216" cy="122" rx="45" ry="24" fill="#2D3748" filter="url(#s1)"/>
+  <text x="216" y="118" text-anchor="middle" font-size="9" font-weight="700" fill="white" letter-spacing="0.5">PRODUCT</text>
+  <text x="216" y="130" text-anchor="middle" font-size="8.5" fill="#E2E8F0">change raised</text>
+
+  <line x1="261" y1="122" x2="296" y2="122" stroke="#2D3748" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Step 1: Send email -->
+  <rect x="296" y="100" width="148" height="44" rx="5" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.8" filter="url(#s1)"/>
+  <text x="370" y="117" text-anchor="middle" font-size="9.5" font-weight="600" fill="#2D3748">Email to Catalogue Mgr</text>
+  <text x="370" y="131" text-anchor="middle" font-size="8.5" fill="#718096">free-form, no template</text>
+  <path d="M370,100 L370,83" stroke="#E53E3E" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="284" y="69" width="174" height="17" rx="3" fill="#FED7D7"/>
+  <text x="371" y="81" text-anchor="middle" font-size="8" fill="#C53030">No structured format — missing fields common</text>
+
+  <line x1="444" y1="122" x2="481" y2="122" stroke="#2D3748" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Decision 1 -->
+  <polygon points="514,101 547,122 514,143 481,122" fill="white" stroke="#4A5568" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="514" y="119" text-anchor="middle" font-size="8" fill="#2D3748">Fields</text>
+  <text x="514" y="130" text-anchor="middle" font-size="8" fill="#2D3748">complete?</text>
+
+  <!-- NO rework -->
+  <text x="556" y="111" font-size="8.5" fill="#C53030" font-weight="600">No</text>
+  <rect x="556" y="97" width="118" height="34" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.4"/>
+  <text x="615" y="112" text-anchor="middle" font-size="8.5" fill="#C53030" font-weight="600">Back to Buyer</text>
+  <text x="615" y="124" text-anchor="middle" font-size="8" fill="#9B2C2C">1–3 day delay</text>
+  <path d="M547,115 L556,115" stroke="#E53E3E" stroke-width="1.4" marker-end="url(#arr-r)"/>
+  <path d="M615,97 Q615,79 370,79 Q296,79 296,100" fill="none" stroke="#E53E3E" stroke-width="1.1" stroke-dasharray="5,3" marker-end="url(#arr-r)"/>
+
+  <!-- YES down -->
+  <text x="521" y="160" font-size="8.5" fill="#2D3748">Yes</text>
+  <line x1="514" y1="143" x2="514" y2="175" stroke="#2D3748" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <!-- Pain callout above 3 boxes -->
+  <path d="M580,175 L580,164" stroke="#E53E3E" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="466" y="151" width="232" height="16" rx="3" fill="#FED7D7"/>
+  <text x="582" y="163" text-anchor="middle" font-size="8" fill="#C53030">3 separate manual updates — ~4 hrs/week, error-prone</text>
+
+  <!-- Three parallel boxes — varied widths -->
+  <rect x="360" y="190" width="128" height="42" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="424" y="207" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Update Shopify</text>
+  <text x="424" y="220" text-anchor="middle" font-size="8.5" fill="#718096">manual / eCommerce</text>
+
+  <rect x="510" y="190" width="136" height="42" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="578" y="207" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Update Lightspeed</text>
+  <text x="578" y="220" text-anchor="middle" font-size="8.5" fill="#718096">manual / POS</text>
+
+  <rect x="668" y="190" width="142" height="42" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="739" y="207" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Update spreadsheet</text>
+  <text x="739" y="220" text-anchor="middle" font-size="8.5" fill="#718096">master Excel file</text>
+
+  <!-- Fan from decision to three boxes -->
+  <path d="M514,180 L514,186 L424,186 L424,190" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M514,180 L514,186 L578,186 L578,190" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M514,180 L514,186 L739,186 L739,190" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Merge back to Decision 2 at x=614, y=267 -->
+  <path d="M424,232 L424,258 L614,258 L614,267" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <path d="M578,232 L578,258" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <path d="M739,232 L739,258 L614,258" fill="none" stroke="#2D3748" stroke-width="1.4"/>
+  <line x1="614" y1="258" x2="614" y2="267" stroke="#2D3748" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- Decision 2: Price change? -->
+  <polygon points="650,267 686,286 650,305 614,286" fill="white" stroke="#4A5568" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="650" y="283" text-anchor="middle" font-size="8" fill="#2D3748">Price</text>
+  <text x="650" y="294" text-anchor="middle" font-size="8" fill="#2D3748">change?</text>
+
+  <!-- Yes → Finance -->
+  <text x="694" y="278" font-size="8.5" fill="#2D3748">Yes</text>
+  <path d="M686,286 L740,286 L740,325" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- No → stores -->
+  <text x="580" y="280" font-size="8.5" fill="#2D3748">No</text>
+  <path d="M614,286 L544,286 L544,415" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Finance box -->
+  <rect x="656" y="338" width="168" height="42" rx="4" fill="#FEFCBF" stroke="#D69E2E" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="740" y="355" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Informal spreadsheet review</text>
+  <text x="740" y="368" text-anchor="middle" font-size="8.5" fill="#744210">no sign-off, no trail</text>
+  <path d="M822,359 L854,359" stroke="#E53E3E" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="854" y="347" width="178" height="26" rx="3" fill="#FED7D7"/>
+  <text x="943" y="358" text-anchor="middle" font-size="8" fill="#C53030">No approval audit trail</text>
+  <text x="943" y="369" text-anchor="middle" font-size="8" fill="#C53030">Who approved? When?</text>
+
+  <!-- Finance → store lane -->
+  <path d="M740,380 L740,420 L660,420" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Store Mgr lane -->
+  <rect x="454" y="428" width="140" height="42" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="524" y="445" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Receives emailed PDF</text>
+  <text x="524" y="458" text-anchor="middle" font-size="8.5" fill="#718096">product sheet</text>
+
+  <rect x="624" y="428" width="136" height="42" rx="4" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.6" filter="url(#s1)"/>
+  <text x="692" y="445" text-anchor="middle" font-size="9" fill="#2D3748" font-weight="600">Forwards PDF</text>
+  <text x="692" y="458" text-anchor="middle" font-size="8.5" fill="#718096">to each staff member</text>
+
+  <path d="M544,415 L544,428" fill="none" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M660,420 L660,428 L624,428" fill="none" stroke="#2D3748" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="594" y1="449" x2="624" y2="449" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Sales staff END -->
+  <line x1="692" y1="470" x2="692" y2="500" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="604" y="510" width="176" height="44" rx="22" fill="#C53030" filter="url(#s2)"/>
+  <text x="692" y="528" text-anchor="middle" font-size="10" font-weight="700" fill="white">Channels out of sync.</text>
+  <text x="692" y="543" text-anchor="middle" font-size="9" fill="#FED7D7">Staff quoting outdated info.</text>
+  <path d="M780,532 L814,532" stroke="#E53E3E" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+  <rect x="814" y="520" width="178" height="26" rx="3" fill="#FED7D7"/>
+  <text x="903" y="531" text-anchor="middle" font-size="8" fill="#C53030">24–72 hr lag between update</text>
+  <text x="903" y="542" text-anchor="middle" font-size="8" fill="#C53030">and staff awareness</text>
+
+  <!-- Footer -->
+  <rect x="36" y="582" width="1168" height="62" rx="4" fill="#FFF5F5" stroke="#FEB2B2" stroke-width="1"/>
+  <text x="55" y="600" font-size="9.5" font-weight="700" fill="#C53030" letter-spacing="0.5">KEY INEFFICIENCIES</text>
+  <line x1="55" y1="604" x2="55" y2="634" stroke="#C53030" stroke-width="1.8"/>
+  <text x="68" y="614" font-size="9" fill="#2D3748">① Free-form email submissions — missing fields trigger 1–3 day rework loops before work can begin</text>
+  <text x="68" y="628" font-size="9" fill="#2D3748">② Triple manual data entry across Shopify, POS and Excel — approximately 4 hrs/week, frequent errors</text>
+  <line x1="644" y1="604" x2="644" y2="634" stroke="#FEB2B2" stroke-width="1"/>
+  <text x="657" y="614" font-size="9" fill="#2D3748">③ No formal price change approval workflow — errors reach customers before being caught</text>
+  <text x="657" y="628" font-size="9" fill="#2D3748">④ Sales staff dependent on emailed PDFs with 24–72 hr lag — quoting discontinued lines and wrong prices</text>
+  <text x="1204" y="654" text-anchor="end" font-size="7.5" fill="#A0AEC0">A. Chowdhury  ·  v1.2  ·  Mar 2026  ·  CS-01</text>
+</svg>
