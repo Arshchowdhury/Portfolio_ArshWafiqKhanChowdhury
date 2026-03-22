@@ -99,4 +99,4 @@ Open to technology consultant, implementation consultant, and BA roles across Au
 
 **Email:** arshwafiq@gmail.com
 **LinkedIn:** [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
-**Phone:** +61 403 859 791
+
