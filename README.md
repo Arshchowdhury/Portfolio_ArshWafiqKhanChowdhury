@@ -1,91 +1,102 @@
-# Arsh Wafiq Khan Chowdhury — Portfolio
+# Arsh Wafiq Khan Chowdhury
 
-Technology Consultant based in Sydney, specialising in Microsoft Azure, AI agent design, Power Platform, and digital transformation. I work at the intersection of solution architecture and delivery, helping organisations translate complex business problems into working technical solutions.
+**Technology Consultant · Power Platform & Azure · Sydney, NSW**
 
-📧 arshwafiq@gmail.com · 🔗 [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury) · 📍 Sydney, NSW · Full work rights ·
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-arsh--wafiq--khan--chowdhury-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
+[![Email](https://img.shields.io/badge/Email-arshwafiq%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:arshwafiq@gmail.com)
+[![Location](https://img.shields.io/badge/Location-Sydney%2C%20NSW-lightgrey?style=flat)](#)
 
 ---
 
-## Portfolio
+## What I do
 
-### 🤖 AI Agent Design
-Three original AI agent designs demonstrating end-to-end solution architecture across financial services, aged care, and retail. Each agent includes a full business case, Azure infrastructure as code (Bicep), prompt engineering, conversation design, Power Automate escalation flows, and governance approach.
+I help organisations close the gap between what technology promises and what people actually use.
 
-| Agent | Industry | Primary Problem | Stack |
+My background is in UX and digital solution design, now applied as a technology consultant across requirements workshops, solution design, Power Platform implementations, and AI-assisted automation. I work end-to-end — from discovery and documentation through to UAT, training, and go-live.
+
+My focus area is Microsoft's ecosystem: Power Apps, Power Automate, Power BI, Copilot Studio, and Azure OpenAI. I have delivered across aged care, financial services, and government sectors. I hold a Master of Commerce (Extension) from UNSW Sydney (Distinction average, WAM 79) specialising in Business Analytics and Digital Transformation.
+
+---
+
+## Portfolio Case Studies
+
+Simulated engagements demonstrating end-to-end consulting methodology, BA frameworks, and Power Platform delivery. Each includes discovery artefacts (SIPOC, BPMN, gap analysis), requirements documentation, solution design, and outcome metrics.
+
+| # | Case Study | Industry | Stack | Key Artefacts |
+|---|---|---|---|---|
+| 01 | [Northgate Co-working — Room Booking System](./consulting-case-studies/01-room-booking-power-apps/) | Facilities / SME | Power Apps, Power Automate, SharePoint | SIPOC, BPMN, Requirements Register, Solution Design |
+| 02 | [Summit Advisory — Sales Pipeline Dashboard](./consulting-case-studies/02-sales-pipeline-power-bi/) | Professional Services | Power BI, Dynamics 365, DAX | Gap Analysis, Data Model, DAX Measures |
+| 03 | [Clearpath Health — Digital Intake Automation](./consulting-case-studies/03-clearpath-health-intake/) | Healthcare | Power Apps, Power Automate, Azure OpenAI | Requirements Register, BPMN, Value Stream Map, Solution Design |
+
+---
+
+## AI Agent Design
+
+Three original AI agent designs across distinct industries, each grounded in a specific business problem. All follow a shared design philosophy: business problems drive technology choices, human review escalation paths are mandatory, and governance concerns (data sovereignty, PII handling, access control) are treated as first-class design elements. Infrastructure is deployed via modular Bicep templates using Azure OpenAI (GPT-4o), Azure AI Search, Blob Storage, and Key Vault.
+
+| Agent | Industry | Problem Addressed | Technical Approach |
 |---|---|---|---|
-| [Findfield](Ai-Agent-Design/Query-AI-Assistant/) | Financial Services | Customer policy queries taking 24–48hrs | RAG · Azure OpenAI · Bicep · Python |
-| [CareAssist](Ai-Agent-Design/CareAssist-AI-Agent/) | Aged Care | Clinical incidents not escalated in time | Copilot Studio · Power Automate · Teams |
-| [RetailIQ](Ai-Agent-Design/RetailIQ%20AI%20Agent/) | Retail / eCommerce | Sales staff drowning in product queries | RAG · Copilot Studio · Power Automate |
-
-→ [View AI Agent Design Portfolio](Ai-Agent-Design/)
+| [Apex Query Assistant](./Ai-Agent-Design/Query-AI-Assistant/) | Financial Services | Policy query resolution delays causing advisor bottlenecks | Python RAG pipeline, Azure SDK, token-aware chunking, hybrid vector search |
+| [CareAssist Incident Agent](./Ai-Agent-Design/CareAssist-AI-Agent/) | Aged Care | Compliance-driven incident escalation with no structured workflow | Human-in-the-loop design, audit trail architecture, regulatory obligation mapping |
+| [RetailIQ Sales Agent](./Ai-Agent-Design/RetailIQ-AI-Agent/) | Retail / eCommerce | Sales team query overload reducing response throughput | Multi-channel deployment (Teams + web), rapid ROI framing, Power Automate integration |
 
 ---
 
-### 📐 Solution Design
-End-to-end Solution Design Document for a fictional Microsoft 365 digital transformation engagement. Covers requirements analysis, multi-option assessment, architecture design, phased implementation roadmap, risk management, and ROI analysis.
+## Workflow Automation
 
-| Artefact | Client | Stack |
+| Project | Description | Stack |
 |---|---|---|
-| [TrueField Aged Care — SDD](solution-design-work/Truefield%20Aged%20Care/) | TrueField Aged Care (Fictional) | Power Apps · Power Automate · SharePoint · Power BI · Teams |
+| [Automated Document Processing](./Workflow-Automation-Case-Studies/Automated-Document-Processing/) | AI-augmented document processing prototype with confidence-based routing logic — high-confidence documents processed automatically, low-confidence items escalated for human review | Power Automate, Azure OpenAI |
 
 ---
 
-### ⚡ Workflow Automation
-Case study documenting an AI-augmented document processing prototype. Covers problem framing, options assessment, Power Automate flow design, Azure OpenAI prompt engineering, confidence routing logic, and production recommendations.
+## Solution Design and Process Work
 
-| Artefact | Stack |
+| Artefact | Description |
 |---|---|
-| [Automated Document Processing](Workflow-Automation-Case-Studies/Automated-Document-Processing/) | Power Automate · Azure OpenAI · SharePoint |
-
----
-
-### 🐍 Data Science Projects
-Applied machine learning projects completed during postgraduate study in Business Analytics at UNSW Sydney. Demonstrates Python, scikit-learn, and predictive modelling skills that underpin the AI and analytics work across this portfolio.
-
-| Project | Techniques |
-|---|---|
-| [Best Seller Classification — Amazon](data-science-projects/) | Feature engineering · Random Forest · Gradient Boosting |
-| [Heart Disease Prediction Model](data-science-projects/) | Binary classification · ROC-AUC · Clinical ML |
-| [Smartphone Classification](data-science-projects/) | Multi-class classification · Feature importance |
-
-→ [View Data Science Projects](data-science-projects/)
-
----
-
-## About Me
-
-I hold a Master of Commerce (Extension) from UNSW Sydney, specialising in Business Analytics and Digital Transformation (WAM 79, Distinction average), and a Bachelor of Business and Commerce with First Class Honours from Monash University.
-
-My consulting experience spans Azure OpenAI, Copilot Studio, Power Apps, Power Automate, Power BI, Azure AI Search, and Dynamics 365, delivered for clients in aged care, government, and financial services. I bring both technical depth and the consulting skills that make solutions land: requirements workshops, solution design documentation, stakeholder management, and end-to-end delivery ownership.
+| [Truefield Aged Care — M365 Transformation](./solution-design-work/Truefield%20Aged%20Care/) | End-to-end solution design for a Microsoft 365 transformation engagement, covering requirements analysis, solution architecture, implementation approach, and risk management |
+| [Retail Catalogue Management — Process Mapping](./Process%20Mapping/retail-catalogue-management/) | BPMN 2.0 swim lane diagrams, SIPOC, and current/future state process documentation |
 
 ---
 
 ## Technical Skills
 
-**AI and Agentic:** Azure OpenAI (GPT-4o) · Copilot Studio · Azure AI Search · RAG pipeline design · Prompt engineering · Bicep IaC
+**Power Platform:** Power Apps (canvas and model-driven), Power Automate, Power BI, Copilot Studio, Dataverse, Dynamics 365
 
-**Power Platform:** Power Apps (Canvas and Model-Driven) · Power Automate · Power BI · AI Builder
+**Azure:** Azure OpenAI (GPT-4o), Azure AI Search, Azure AI Foundry, Bicep IaC, Blob Storage, Key Vault
 
-**Azure:** Azure Functions · Azure SQL · Azure AD / Entra ID · Azure Key Vault · Azure Blob Storage · Azure Portal
+**Consulting and BA:** Requirements workshops, BPMN 2.0, SIPOC, Value Stream Mapping, gap analysis, SOW authoring, solution design documentation, stakeholder management
 
-**Data and Analytics:** Python · SQL · pandas · scikit-learn · Tableau · IBM SPSS
+**Design and Productivity:** Figma, SharePoint, Microsoft Teams, Canva
 
-**Consulting and Delivery:** Requirements Gathering · Solution Design Documentation · SOW Authoring · Stakeholder Workshops · Process Mapping · UAT
-
-**Platforms:** Dynamics 365 · SAP · HubSpot · Microsoft 365
+**Development and Data:** Python (pandas, scikit-learn), SQL, GitHub
 
 ---
 
 ## Certifications
-
-- SAP Technology Consultant Professional Certificate
-- Google Project Management Certificate
-- Google Introduction to Generative AI
-- IBM Data Science Professional Certificate
-- AWS Cloud Foundations
-- Interaction Design Foundation: HCI, UX Design, Design Thinking
-- HubSpot: Digital Marketing, SEO, Content Marketing, Inbound Marketing
+- SAP Certified
+- Google Certified
+- AWS Certified
+- IBM Certified
+- AZ-900 *(in progress)*
+- PL-900 Power Platform Fundamentals *(in progress)*
 
 ---
 
-*Portfolio artefacts are original work. All client scenarios are fictionalised for demonstration purposes.*
+## Education
+
+**Master of Commerce (Extension)** — UNSW Sydney
+Specialisation: Business Analytics and Digital Transformation | WAM: 79 (Distinction)
+
+**Bachelor of Business and Commerce** — Monash University
+First Class Honours
+
+---
+
+## Contact
+
+Open to technology consultant, implementation consultant, and BA roles across Australia.
+
+**Email:** arshwafiq@gmail.com
+**LinkedIn:** [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
+**Phone:** +61 403 859 791
