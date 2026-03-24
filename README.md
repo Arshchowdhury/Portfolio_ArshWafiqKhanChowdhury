@@ -8,9 +8,9 @@
 
 ---
 
-I started in UX. Spent years thinking about how people interact with systems, what makes something intuitive, what makes someone abandon a tool halfway through a task. At some point I realised the more interesting version of that question was upstream: why does the system exist at all, and is it solving the right problem?
+I started in UX. Spent years thinking about how people interact with systems, what makes something intuitive, and what makes someone abandon a tool halfway through a task. At some point I realised the more interesting version of that question was upstream: why does the system exist at all, and is it solving the right problem?
 
-That pulled me toward consulting. I now work across solution design, business analysis, and implementation — mostly in the Microsoft ecosystem, with a growing focus on AI-assisted automation and agent architecture. The UX background didn't go away; it just moved into how I run discovery workshops and how I think about adoption before anything gets built.
+That pulled me toward consulting. I now work across solution design, business analysis, and implementation with a growing focus on AI-assisted automation and agent architecture. The UX background didn't go away; it just moved into how I run discovery workshops and how I think about adoption before anything gets built.
 
 ---
 
@@ -28,8 +28,17 @@ That pulled me toward consulting. I now work across solution design, business an
 
 ---
 
-## Case Studies
+## Live Projects
 
+**[Portfolio Site](https://arshchowdhury.vercel.app/)** — Personal site with case studies, skills, and contact. Built in React, deployed on Vercel.
+
+**[Australian ICT & Digital Workforce Dashboard](https://arsh-ict-dashboard.vercel.app/)** — Market intelligence dashboard visualising ICT job demand, salaries, skills, and emerging roles using public Australian data. React + Recharts.
+
+**[BA Process Documentation Generator](https://arsh-ba-automation-tool.vercel.app/)** — AI-powered tool that generates SIPOC tables, discovery questions, pain points, and framework recommendations from a process description. Uses Groq API (free tier).
+
+---
+
+## Case Studies
 
 ### [Room Booking — Platform Evaluation and Migration](./consulting-case-studies/01-room-booking-platform-migration/)
 *Live engagement · Facilities Management / Co-working · Sydney*
@@ -97,7 +106,6 @@ BPMN 2.0 swim lane diagrams and SIPOC for a retail catalogue workflow. Current s
 - AWS Cloud Certificate 
 - IBM - Exploratory Data Analysis for Machine Learning, Python for Data Science, AI and Development, Data Science Methodology, Tools for Data Science V2, Data Science Orientation,
 - Hubspot - Digital Advertising, Inbound Marketing, Content Marketing, Social Media Marketing, SEO, Digital Marketing.
-  
 
 **Currently working toward:**
 - AI-102: Azure AI Engineer Associate — exam booked April 2026
@@ -118,3 +126,7 @@ First Class Honours
 
 Open to technology consultant, implementation consultant, and BA roles in Australia.
 **arshwafiq@gmail.com** · [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
+
+
+
+
