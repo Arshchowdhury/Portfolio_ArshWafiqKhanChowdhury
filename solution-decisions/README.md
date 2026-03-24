@@ -2,8 +2,6 @@
 
 This folder contains Architecture Decision Records (ADRs) — short documents that capture significant technology or design decisions, the context in which they were made, the options considered, and the rationale for the choice.
 
-ADRs are useful because decisions that seem obvious at the time often become unclear later. Writing them down forces clarity at the point of decision and gives future stakeholders (or future me) a way to understand why something was built the way it was — not just what was built.
-
 Each record follows the same structure: Status, Context, Decision, Options Considered, Rationale, Consequences.
 
 ---
