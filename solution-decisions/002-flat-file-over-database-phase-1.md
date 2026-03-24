@@ -2,7 +2,7 @@
 
 **Status:** Accepted
 **Date:** March 2026
-**Context:** Room booking system — data storage decision for local server deployment
+**Context:** Room booking system - data storage decision for local server deployment
 
 ---
 
