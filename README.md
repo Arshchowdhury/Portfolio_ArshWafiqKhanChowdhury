@@ -1,6 +1,6 @@
 # Arsh Wafiq Khan Chowdhury
 
-**Technology Consultant · Power Platform & Azure · Sydney, NSW**
+**Technology Consultant — Sydney, NSW**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-arsh--wafiq--khan--chowdhury-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
 [![Email](https://img.shields.io/badge/Email-arshwafiq%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:arshwafiq@gmail.com)
@@ -8,95 +8,112 @@
 
 ---
 
-## What I do
+I started in UX. Spent years thinking about how people interact with systems — what makes something intuitive, what makes someone abandon a tool halfway through a task. At some point I realised the more interesting version of that question was upstream: why does the system exist at all, and is it solving the right problem?
 
-I help organisations close the gap between what technology promises and what people actually use.
-
-My background is in UX and digital solution design, now applied as a technology consultant across requirements workshops, solution design, Power Platform implementations, and AI-assisted automation. I work end-to-end — from discovery and documentation through to UAT, training, and go-live.
-
-My focus area is Microsoft's ecosystem: Power Apps, Power Automate, Power BI, Copilot Studio, and Azure OpenAI. I have delivered across aged care, financial services, and government sectors. I hold a Master of Commerce (Extension) from UNSW Sydney (Distinction average, WAM 79) specialising in Business Analytics and Digital Transformation.
+That pulled me toward consulting. I now work across solution design, business analysis, and implementation — mostly in the Microsoft ecosystem, with a growing focus on AI-assisted automation and agent architecture. The UX background didn't go away; it just moved into how I run discovery workshops and how I think about adoption before anything gets built.
 
 ---
 
-## Portfolio Case Studies
+## What I work with
 
-Simulated engagements demonstrating end-to-end consulting methodology, BA frameworks, and Power Platform delivery. Each includes discovery artefacts (SIPOC, BPMN, gap analysis), requirements documentation, solution design, and outcome metrics.
+**Power Platform:** Power Apps (canvas and model-driven), Power Automate, Power BI, Copilot Studio, Dataverse, Dynamics 365
 
-| # | Case Study | Industry | Stack | Key Artefacts |
-|---|---|---|---|---|
-| 01 | [Northgate Co-working — Room Booking System](./consulting-case-studies/01-room-booking-power-apps/) | Facilities / SME | Power Apps, Power Automate, SharePoint | SIPOC, BPMN, Requirements Register, Solution Design |
-| 02 | [Summit Advisory — Sales Pipeline Dashboard](./consulting-case-studies/02-sales-pipeline-power-bi/) | Professional Services | Power BI, Dynamics 365, DAX | Gap Analysis, Data Model, DAX Measures |
-| 03 | [Clearpath Health — Digital Intake Automation](./consulting-case-studies/03-clearpath-health-intake/) | Healthcare | Power Apps, Power Automate, Azure OpenAI | Requirements Register, BPMN, Value Stream Map, Solution Design |
+**Azure:** Azure OpenAI (GPT-4o), Azure AI Search, Azure App Service, Azure SQL, Microsoft Entra ID, Application Insights, Bicep IaC, Key Vault, Blob Storage
+
+**Business Analysis:** Requirements workshops, BPMN 2.0, SIPOC, Value Stream Mapping, gap analysis, solution documentation, stakeholder management
+
+**Development:** React, HTML/CSS/JavaScript, Python (pandas, scikit-learn, RAG pipelines), SQL
+
+**Design:** Figma, wireframing, UX research, usability testing
 
 ---
 
-## AI Agent Design
+## Case Studies
 
-Three original AI agent designs across distinct industries, each grounded in a specific business problem. All follow a shared design philosophy: business problems drive technology choices, human review escalation paths are mandatory, and governance concerns (data sovereignty, PII handling, access control) are treated as first-class design elements. Infrastructure is deployed via modular Bicep templates using Azure OpenAI (GPT-4o), Azure AI Search, Blob Storage, and Key Vault.
+### [Room Booking — Platform Evaluation and Migration](./consulting-case-studies/01-room-booking-platform-migration/)
+*Live engagement · Facilities Management / Co-working · Sydney*
 
-| Agent | Industry | Problem Addressed | Technical Approach |
-|---|---|---|---|
-| [Apex Query Assistant](./Ai-Agent-Design/Query-AI-Assistant/) | Financial Services | Policy query resolution delays causing advisor bottlenecks | Python RAG pipeline, Azure SDK, token-aware chunking, hybrid vector search |
-| [CareAssist Incident Agent](./Ai-Agent-Design/CareAssist-AI-Agent/) | Aged Care | Compliance-driven incident escalation with no structured workflow | Human-in-the-loop design, audit trail architecture, regulatory obligation mapping |
-| [RetailIQ Sales Agent](./Ai-Agent-Design/RetailIQ-AI-Agent/) | Retail / eCommerce | Sales team query overload reducing response throughput | Multi-channel deployment (Teams + web), rapid ROI framing, Power Automate integration |
+A co-working operator had a Power Apps room booking system that staff weren't using. The brief was to fix it. After working with the team, the recommendation was to replace it — platform fit was the issue, not the build. Migrated to a React web app on a local Apache server; documented the Azure migration architecture (App Service, Azure SQL, Entra ID) for when they're ready to move off on-prem.
+
+`React` `Apache` `Azure migration roadmap`
+
+---
+
+### [Sales Pipeline Dashboard — Summit Advisory](./consulting-case-studies/02-sales-pipeline-power-bi/)
+*Designed case study · Professional Services*
+
+A consulting firm running their pipeline out of manually exported Excel files. Replaced with a live Power BI dashboard connected directly to Dynamics 365. Gap analysis surfaced that the root problem was the data source, not the report format. Includes DAX for weighted pipeline, rolling win rate, stage conversion, and deal cycle time. RLS for BD staff self-service.
+
+`Power BI` `Dynamics 365` `DAX` `RLS`
+
+---
+
+### [Digital Intake Automation — Clearpath Health](./consulting-case-studies/03-clearpath-health-intake/)
+*Designed case study · Healthcare / Community Services*
+
+A community health provider processing new patient intake on paper, with staff manually re-entering data. Digitised the form, automated data flows to the PMS via API, and added an AI-assisted accessibility agent (Copilot Studio) for patients with low English literacy — a scope gap that surfaced in the discovery workshop, not the original brief.
+
+`Power Apps` `Power Automate` `Azure OpenAI` `Copilot Studio`
+
+---
+
+## AI Agent Designs
+
+Three industry-specific agents built on Azure OpenAI, Copilot Studio, and Power Automate. Infrastructure via Bicep templates. Design philosophy: business problem first, governance as a first-class concern, mandatory human escalation paths.
+
+### [Query AI Assistant](./Ai-Agent-Design/Query-AI-Assistant/) — Financial Services
+Policy query resolution. Python RAG pipeline, Azure AI Search grounding, token-aware chunking, confidence-based routing. Built for environments where an incorrect answer carries regulatory consequence.
+
+### [CareAssist Incident Agent](./Ai-Agent-Design/CareAssist-AI-Agent/) — Aged Care
+Clinical incident triage via Teams. GPT-4o classifies by severity, category, and regulatory flag in real time. Three-tier Power Automate escalation. Immutable SharePoint audit trail for Aged Care Act compliance. Australia East datacentres.
+
+### [RetailIQ Sales Agent](./Ai-Agent-Design/RetailIQ-AI-Agent/) — Retail / eCommerce
+Multi-channel sales agent across Teams and web. Handles product queries, stock availability, order status. Power Automate follow-up integration. Confidence threshold routing escalates ambiguous queries to human staff.
 
 ---
 
 ## Workflow Automation
 
-| Project | Description | Stack |
-|---|---|---|
-| [Automated Document Processing](./Workflow-Automation-Case-Studies/Automated-Document-Processing/) | AI-augmented document processing prototype with confidence-based routing logic — high-confidence documents processed automatically, low-confidence items escalated for human review | Power Automate, Azure OpenAI |
+### [Automated Document Processing](./Workflow-Automation-Case-Studies/Automated-Document-Processing/)
+Confidence-based routing for AI-augmented document handling. High-confidence items processed automatically; low-confidence escalated for human review. Built on the principle that automation should shrink the queue, not replace the judgment call.
 
 ---
 
 ## Solution Design and Process Work
 
-| Artefact | Description |
-|---|---|
-| [Truefield Aged Care — M365 Transformation](./solution-design-work/Truefield%20Aged%20Care/) | End-to-end solution design for a Microsoft 365 transformation engagement, covering requirements analysis, solution architecture, implementation approach, and risk management |
-| [Retail Catalogue Management — Process Mapping](./Process%20Mapping/retail-catalogue-management/) | BPMN 2.0 swim lane diagrams, SIPOC, and current/future state process documentation |
+**[Truefield Aged Care — M365 Transformation](./solution-design-work/Truefield%20Aged%20Care/)**
+End-to-end solution design for a Microsoft 365 transformation: governance, information architecture, Teams deployment, change management.
 
----
-
-## Technical Skills
-
-**Power Platform:** Power Apps (canvas and model-driven), Power Automate, Power BI, Copilot Studio, Dataverse, Dynamics 365
-
-**Azure:** Azure OpenAI (GPT-4o), Azure AI Search, Azure AI Foundry, Bicep IaC, Blob Storage, Key Vault
-
-**Consulting and BA:** Requirements workshops, BPMN 2.0, SIPOC, Value Stream Mapping, gap analysis, SOW authoring, solution design documentation, stakeholder management
-
-**Design and Productivity:** Figma, SharePoint, Microsoft Teams, Canva
-
-**Development and Data:** Python (pandas, scikit-learn), SQL, GitHub
+**[Retail Catalogue Management — Process Mapping](./Process%20Mapping/retail-catalogue-management/)**
+BPMN 2.0 swim lane diagrams and SIPOC for a retail catalogue workflow. Current state mapping, pain point analysis, future state design.
 
 ---
 
 ## Certifications
-- SAP Professionals Fundamentals Certified 
-- Google Project Management Certified
-- AWS Cloud 
-- IBM Exploratory Data Analysis for Machine Learning, Python for Data Science, AI & Development, Data Science Methodology, Tools for Data Science, Exploratory Data Analysis for Machine learning
-- AZ-900 *(in progress)*
-- PL-900 Power Platform Fundamentals *(in progress)*
+
+- SAP Certified — Professionals Fundamentals
+- Google Project Management Certificate, Intro to Generative AI 
+- AWS Cloud Certificate 
+- IBM - Exploratory Data Analysis for Machine Learning, Python for Data Science, AI and Development, Data Science Methodology, Tools for Data Science V2, Data Science Orientation,
+- Hubspot - Digital Advertising, Inbound Marketing, Content Marketing, Social Media Marketing, SEO, Digital Marketing.
+  
+
+**Currently working toward:**
+- AI-102: Azure AI Engineer Associate — exam booked April 2026
+- PL-200: Microsoft Power Platform Functional Consultant
+- PL-900: Microsoft Power Platform Fundamentals
 
 ---
 
 ## Education
 
 **Master of Commerce (Extension)** — UNSW Sydney
-Specialisation: Business Analytics and Digital Transformation | WAM: 79 (Distinction)
+Business Analytics and Digital Transformation · WAM 79, Distinction
 
 **Bachelor of Business and Commerce** — Monash University
 First Class Honours
 
 ---
 
-## Contact
-
-Open to technology consultant, implementation consultant, and BA roles across Australia.
-
-**Email:** arshwafiq@gmail.com
-**LinkedIn:** [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
-
+Open to technology consultant, implementation consultant, and BA roles in Australia.
+**arshwafiq@gmail.com** · [linkedin.com/in/arsh-wafiq-khan-chowdhury](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
