@@ -1,5 +1,6 @@
 # Process Mapping: Retail Product Catalogue Management
-## Current State → Future State — Manual Catalogue to Automated Digital Workflow
+## Current State → Future State 
+## Manual Catalogue to Automated Digital Workflow
 
 **Author:** Arsh Wafiq Khan Chowdhury — Technology Consultant, Sydney NSW
 **Date:** March 2026
