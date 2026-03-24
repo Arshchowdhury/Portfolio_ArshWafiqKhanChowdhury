@@ -74,10 +74,10 @@ Three original AI agent designs across distinct industries, each grounded in a s
 ---
 
 ## Certifications
-- SAP Certified
-- Google Certified
-- AWS Certified
-- IBM Certified
+- SAP Professionals Fundamentals Certified 
+- Google Project Management Certified
+- AWS Cloud 
+- IBM Exploratory Data Analysis for Machine Learning, Python for Data Science, AI & Development, Data Science Methodology, Tools for Data Science, Exploratory Data Analysis for Machine learning
 - AZ-900 *(in progress)*
 - PL-900 Power Platform Fundamentals *(in progress)*
 
