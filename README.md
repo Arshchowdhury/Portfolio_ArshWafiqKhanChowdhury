@@ -8,7 +8,7 @@
 
 ---
 
-I started in UX. Spent years thinking about how people interact with systems — what makes something intuitive, what makes someone abandon a tool halfway through a task. At some point I realised the more interesting version of that question was upstream: why does the system exist at all, and is it solving the right problem?
+I started in UX. Spent years thinking about how people interact with systems, what makes something intuitive, what makes someone abandon a tool halfway through a task. At some point I realised the more interesting version of that question was upstream: why does the system exist at all, and is it solving the right problem?
 
 That pulled me toward consulting. I now work across solution design, business analysis, and implementation — mostly in the Microsoft ecosystem, with a growing focus on AI-assisted automation and agent architecture. The UX background didn't go away; it just moved into how I run discovery workshops and how I think about adoption before anything gets built.
 
