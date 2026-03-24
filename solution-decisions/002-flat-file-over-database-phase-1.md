@@ -8,7 +8,7 @@
 
 ## Context
 
-Having decided to build a React SPA on the client's Apache server (see ADR-001), a data storage approach was needed for Phase 1. The system needed to store rooms, bookings, members, and admin blocks. The client had no existing database server. Setting one up would add infrastructure complexity, a maintenance burden, and cost.
+Having decided to build a React SPA on the client's Nginx server (see ADR-001), a data storage approach was needed for Phase 1. The system needed to store rooms, bookings, members, and admin blocks. The client had no existing database server. Setting one up would add infrastructure complexity, a maintenance burden, and cost.
 
 ---
 
@@ -38,7 +38,7 @@ Use a JSON flat-file store for Phase 1, with the schema explicitly designed to m
 
 Booking volume for Phase 1 was under 50 bookings per day across one site. A JSON flat-file is entirely sufficient at this volume and removes all database infrastructure overhead from a client who has no IT administrator.
 
-The critical design constraint was that the Phase 2 migration risk needed to be low. This was addressed by structuring the JSON schema as if it were a normalised relational database — all entities have explicit IDs, foreign key relationships use ID references rather than embedded objects, and the schema maps directly to a four-table SQL design (rooms, bookings, members, adminBlocks). The migration script to Azure SQL was scoped as part of the Phase 2 roadmap.
+The critical design constraint was that the Phase 2 migration risk needed to be low. This was addressed by structuring the JSON schema as if it were a normalised relational database - all entities have explicit IDs, foreign key relationships use ID references rather than embedded objects, and the schema maps directly to a four-table SQL design (rooms, bookings, members, adminBlocks). The migration script to Azure SQL was scoped as part of the Phase 2 roadmap.
 
 ---
 
