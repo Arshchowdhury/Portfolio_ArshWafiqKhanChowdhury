@@ -30,12 +30,13 @@ That pulled me toward consulting. I now work across solution design, business an
 
 ## Case Studies
 
+
 ### [Room Booking — Platform Evaluation and Migration](./consulting-case-studies/01-room-booking-platform-migration/)
 *Live engagement · Facilities Management / Co-working · Sydney*
 
-A co-working operator had a Power Apps room booking system that staff weren't using. The brief was to fix it. After working with the team, the recommendation was to replace it — platform fit was the issue, not the build. Migrated to a React web app on a local Apache server; documented the Azure migration architecture (App Service, Azure SQL, Entra ID) for when they're ready to move off on-prem.
+The company proposed rebuilding a dated room booking system on Microsoft Power Apps. I evaluated the proposal against the client's actual constraints — front-desk hardware performance, licensing cost for casual users, UX flexibility requirements — and recommended against it. Built a custom React web application on a local Apache server instead, with a self-service Admin Panel to address the low-code maintainability argument. Scoped and documented the Azure migration architecture (App Service, Azure SQL, Entra ID) for the client's next growth phase.
 
-`React` `Apache` `Azure migration roadmap`
+`React` `HTML/CSS/JS` `Apache` `Power Apps evaluation` `Azure migration roadmap`
 
 ---
 
