@@ -2,7 +2,7 @@
 ## Current State → Future State 
 ## Manual Catalogue to Automated Digital Workflow
 
-**Author:** Arsh Wafiq Khan Chowdhury — Technology Consultant, Sydney NSW
+**Author:** Arsh Wafiq Khan Chowdhury - Technology Consultant, Sydney NSW
 **Date:** March 2026
 **Classification:** Portfolio artefact - original design. Client details fictionalised.
 
