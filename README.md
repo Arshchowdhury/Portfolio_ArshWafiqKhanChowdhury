@@ -30,6 +30,8 @@ That pulled me toward consulting. I now work across solution design, business an
 
 ## Live Projects
 
+**[Microsoft AI Agent Readiness Assessment](https://microsoft-readiness-tool.vercel.app/)** — Pre-engagement discovery tool that evaluates whether an organisation is positioned to deploy Microsoft Copilot Studio or Azure AI agents. Covers five dimensions specific to the Microsoft ecosystem: Process Foundation, Data and Knowledge, Microsoft Platform, AI Governance, and Change Readiness. Produces a scored maturity profile benchmarked against a typical mid-market range, a capability radar chart, and a personalised printable consulting brief with prioritised recommendations. Accepts an optional organisation name and sector — regulated industries receive tailored compliance notes. Results are shareable via a URL-encoded link. Built in React 19 + Vite, deployed on Vercel.
+
 **[Portfolio Site](https://arshchowdhury.vercel.app/)** — Personal site with case studies, skills, and contact. Built in React, deployed on Vercel.
 
 **[Australian ICT & Digital Workforce Dashboard](https://arsh-ict-dashboard.vercel.app/)** — Market intelligence dashboard visualising ICT job demand, salaries, skills, and emerging roles using public Australian data. React + Recharts.
