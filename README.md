@@ -1,6 +1,6 @@
 # Arsh Wafiq Khan Chowdhury
 
-**Technology Consultant — Sydney, NSW**
+**Technology Consultant - Sydney, NSW**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-arsh--wafiq--khan--chowdhury-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/arsh-wafiq-khan-chowdhury)
 [![Email](https://img.shields.io/badge/Email-arshwafiq%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:arshwafiq@gmail.com)
@@ -32,9 +32,9 @@ That pulled me toward consulting. I now work across solution design, business an
 
 **[Microsoft AI Agent Readiness Assessment](https://microsoft-readiness-tool.vercel.app/)**: Pre-engagement discovery tool that evaluates whether an organisation is positioned to deploy Microsoft Copilot Studio or Azure AI agents. Evaluates five weighted dimensions (Process Foundation 25%, Data and Knowledge 25%, Microsoft Platform 20%, AI Governance 15%, Change Readiness 15%) and maps results to one of seven deployment archetypes, each identifying specifically where the constraint sits, not just how mature the organisation is. Each archetype includes a dynamically generated binding constraint analysis and a three-phase engagement pathway. Includes two practitioner-specific questions targeting failure modes common in Microsoft AI deployments: Power Platform environment strategy and DLP policy compatibility with Copilot Studio. Produces a capability radar chart, benchmark indicator, and printable consulting brief formatted as a first-meeting deliverable. Results are shareable via URL. Built in React 19 + Vite, deployed on Vercel.
 
-**[Portfolio Site](https://arshchowdhury.vercel.app/)** — Personal site with case studies, skills, and contact. Built in React, deployed on Vercel.
+**[Portfolio Site](https://arshchowdhury.vercel.app/)** - Personal site with case studies, skills, and contact. Built in React, deployed on Vercel.
 
-**[Australian ICT & Digital Workforce Dashboard](https://arsh-ict-dashboard.vercel.app/)** — Market intelligence dashboard visualising ICT job demand, salaries, skills, and emerging roles using public Australian data. React + Recharts.
+**[Australian ICT & Digital Workforce Dashboard](https://arsh-ict-dashboard.vercel.app/)** - Market intelligence dashboard visualising ICT job demand, salaries, skills, and emerging roles using public Australian data. React + Recharts.
 
 **[BA Process Documentation Generator](https://arsh-ba-automation-tool.vercel.app/)** — AI-powered tool that generates SIPOC tables, discovery questions, pain points, and framework recommendations from a process description. Uses Groq API (free tier).
 
