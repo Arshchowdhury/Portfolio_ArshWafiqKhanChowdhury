@@ -1,0 +1,16 @@
+[project]
+name = "ai-governance-agent"
+version = "0.1.0"
+description = "AI Governance Advisory Agent — RAG backend for Copilot Studio over an Azure AI Search knowledge base"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v"
+
+[tool.pyright]
+pythonVersion = "3.11"
+include = ["src", "config", "scripts", "tests"]
