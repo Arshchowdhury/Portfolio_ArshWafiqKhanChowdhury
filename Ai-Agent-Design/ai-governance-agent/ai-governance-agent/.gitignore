@@ -1,0 +1,25 @@
+# Environment and secrets
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Audit logs (contain PII in production)
+audit/audit_log.jsonl
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
