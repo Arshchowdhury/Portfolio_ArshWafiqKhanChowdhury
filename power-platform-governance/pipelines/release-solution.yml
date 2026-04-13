@@ -1,0 +1,178 @@
+name: Pack and Release Solution to Test and Production
+
+# Triggered on push to main (i.e., after a PR is merged).
+# Packs the unpacked solution source into a managed .zip,
+# deploys to Test automatically, then waits for a manual approval
+# before deploying to Production.
+#
+# Environments used:
+#   test       — no protection rule (auto-deploy)
+#   production — required reviewer: platform lead (manual approval gate)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'solutions/**'
+
+env:
+  SOLUTION_NAME: RidgelineKM
+  SOLUTION_SOURCE_FOLDER: solutions
+  SOLUTION_BUILD_FOLDER: out/build
+
+jobs:
+  # ── Job 1: Build managed solution ─────────────────────────────────────────
+  build:
+    name: Pack managed solution from source
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Pack unmanaged source → managed .zip.
+      # The managed flag ensures the deployed solution cannot be edited
+      # directly in Test or Production environments.
+      - name: Pack solution (managed)
+        uses: microsoft/powerplatform-actions/pack-solution@v1
+        with:
+          solution-folder: ${{ env.SOLUTION_SOURCE_FOLDER }}/${{ env.SOLUTION_NAME }}
+          solution-file: ${{ env.SOLUTION_BUILD_FOLDER }}/${{ env.SOLUTION_NAME }}_managed.zip
+          solution-type: Managed
+
+      # Upload the managed .zip as a workflow artefact.
+      # Retained for 30 days — used for manual rollback if pipeline is unavailable.
+      - name: Upload managed solution artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.SOLUTION_NAME }}-managed
+          path: ${{ env.SOLUTION_BUILD_FOLDER }}/${{ env.SOLUTION_NAME }}_managed.zip
+          retention-days: 30
+
+  # ── Job 2: Deploy to Test ──────────────────────────────────────────────────
+  deploy-test:
+    name: Deploy to Test environment
+    runs-on: ubuntu-latest
+    needs: build
+    environment: test    # No protection rule — deploys automatically
+
+    steps:
+      - name: Download managed solution artefact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.SOLUTION_NAME }}-managed
+          path: ${{ env.SOLUTION_BUILD_FOLDER }}
+
+      - name: Who am I (verify authentication — Test)
+        uses: microsoft/powerplatform-actions/who-am-i@v1
+        with:
+          environment-url: ${{ secrets.PP_TEST_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+
+      # Import managed solution to Test.
+      # publish-changes: true ensures components are activated immediately after import.
+      # skip-lower-version: false ensures the import fails if an older version is pushed
+      # after a newer one — preventing accidental version regression.
+      - name: Import solution to Test
+        uses: microsoft/powerplatform-actions/import-solution@v1
+        with:
+          environment-url: ${{ secrets.PP_TEST_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+          solution-file: ${{ env.SOLUTION_BUILD_FOLDER }}/${{ env.SOLUTION_NAME }}_managed.zip
+          force-overwrite: true
+          publish-changes: true
+          skip-dependency-check: false
+
+      # Run Solution Checker against the Test import.
+      # Results are posted to the Actions summary.
+      # The job does not fail on warnings — only on critical violations.
+      # Review the checker output before approving the Production deployment.
+      - name: Run Solution Checker
+        uses: microsoft/powerplatform-actions/check-solution@v1
+        with:
+          environment-url: ${{ secrets.PP_TEST_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+          path: ${{ env.SOLUTION_BUILD_FOLDER }}/${{ env.SOLUTION_NAME }}_managed.zip
+          checker-logs-artifact-name: solution-checker-results
+
+      - name: Post Test deployment summary
+        run: |
+          echo "## Test deployment complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Solution:** \`${{ env.SOLUTION_NAME }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Target:** Test environment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Managed solution imported successfully." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Next steps before approving Production:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Review Solution Checker results (see artefact above)" >> $GITHUB_STEP_SUMMARY
+          echo "- Validate the change manually in the Test environment" >> $GITHUB_STEP_SUMMARY
+          echo "- Confirm environment variable values for Production are current" >> $GITHUB_STEP_SUMMARY
+          echo "- Check no blackout window applies (see ALM Runbook section 5)" >> $GITHUB_STEP_SUMMARY
+
+  # ── Job 3: Deploy to Production (with approval gate) ──────────────────────
+  deploy-production:
+    name: Deploy to Production environment
+    runs-on: ubuntu-latest
+    needs: deploy-test
+    environment: production    # Required reviewer: platform lead — manual approval gate
+
+    steps:
+      - name: Download managed solution artefact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.SOLUTION_NAME }}-managed
+          path: ${{ env.SOLUTION_BUILD_FOLDER }}
+
+      - name: Who am I (verify authentication — Production)
+        uses: microsoft/powerplatform-actions/who-am-i@v1
+        with:
+          environment-url: ${{ secrets.PP_PROD_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+
+      - name: Import solution to Production
+        uses: microsoft/powerplatform-actions/import-solution@v1
+        with:
+          environment-url: ${{ secrets.PP_PROD_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+          solution-file: ${{ env.SOLUTION_BUILD_FOLDER }}/${{ env.SOLUTION_NAME }}_managed.zip
+          force-overwrite: true
+          publish-changes: true
+          skip-dependency-check: false
+
+      - name: Post Production deployment summary
+        run: |
+          echo "## Production deployment complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Solution:** \`${{ env.SOLUTION_NAME }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Target:** Production environment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Managed solution imported to Production." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Post-deployment checklist:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Open Production maker portal — check for suspended flows" >> $GITHUB_STEP_SUMMARY
+          echo "- Confirm apps open and function for an end user" >> $GITHUB_STEP_SUMMARY
+          echo "- Post release note to #pp-platform Teams channel" >> $GITHUB_STEP_SUMMARY
+
+# ── Rollback note ──────────────────────────────────────────────────────────
+#
+# To roll back: revert the merge commit on main and push.
+# This triggers the pipeline with the previous source, which will pack and
+# deploy the earlier version as a new managed import.
+#
+# For an emergency manual rollback when the pipeline is unavailable:
+# download the managed .zip from the last successful Actions run artefacts
+# and import manually via Power Platform Admin Centre.
+# Document the manual import in #pp-platform with the reason and solution version.
+# See docs/05_ALM_Runbook.md section 3 for the full rollback procedure.

@@ -1,0 +1,120 @@
+name: Export and Unpack Solution from Development
+
+# Triggered on pull request to main.
+# Exports the target solution from the Development environment,
+# unpacks it to source, and commits the unpacked files to the PR branch.
+# This produces a readable diff for code review before merge.
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'solutions/**'
+
+env:
+  SOLUTION_NAME: RidgelineKM          # Override per solution; see note below
+  SOLUTION_EXPORTED_FOLDER: out/exported
+  SOLUTION_SOURCE_FOLDER: solutions
+
+jobs:
+  export-from-dev:
+    name: Export solution from Development
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      # ── Authenticate ───────────────────────────────────────────────────────
+      # Uses a service principal (client credentials flow).
+      # PP_APP_ID, PP_CLIENT_SECRET, PP_TENANT_ID are stored as GitHub secrets.
+      # The service principal must be assigned the System Administrator role
+      # in the Development environment before this pipeline will succeed.
+      - name: Who am I (verify authentication)
+        uses: microsoft/powerplatform-actions/who-am-i@v1
+        with:
+          environment-url: ${{ secrets.PP_DEV_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+
+      # ── Publish customisations ─────────────────────────────────────────────
+      # Publishes all pending customisations in the Development environment
+      # before export. Equivalent to "Publish all customisations" in the maker portal.
+      # Without this step, unpublished canvas app changes will not be captured.
+      - name: Publish all customisations
+        uses: microsoft/powerplatform-actions/publish-solution@v1
+        with:
+          environment-url: ${{ secrets.PP_DEV_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+
+      # ── Export ────────────────────────────────────────────────────────────
+      # Exports the solution as unmanaged. Unmanaged is correct for Development —
+      # the pipeline will pack it as managed for deployment to Test and Production.
+      - name: Export solution (unmanaged)
+        uses: microsoft/powerplatform-actions/export-solution@v1
+        with:
+          environment-url: ${{ secrets.PP_DEV_URL }}
+          app-id: ${{ secrets.PP_APP_ID }}
+          client-secret: ${{ secrets.PP_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.PP_TENANT_ID }}
+          solution-name: ${{ env.SOLUTION_NAME }}
+          solution-output-file: ${{ env.SOLUTION_EXPORTED_FOLDER }}/${{ env.SOLUTION_NAME }}.zip
+          managed: false
+
+      # ── Unpack ────────────────────────────────────────────────────────────
+      # Unpacks the .zip into individual source files.
+      # Each Dataverse table, flow, canvas app screen, and security role
+      # becomes a separate file — enabling meaningful pull request diffs.
+      - name: Unpack solution to source
+        uses: microsoft/powerplatform-actions/unpack-solution@v1
+        with:
+          solution-file: ${{ env.SOLUTION_EXPORTED_FOLDER }}/${{ env.SOLUTION_NAME }}.zip
+          solution-folder: ${{ env.SOLUTION_SOURCE_FOLDER }}/${{ env.SOLUTION_NAME }}
+          solution-type: Unmanaged
+          overwrite-files: true
+
+      # ── Commit unpacked source ─────────────────────────────────────────────
+      # Commits the unpacked files back to the PR branch.
+      # If there are no changes (the export matched what was already in source),
+      # the commit step is skipped — the "nothing to commit" exit code is handled
+      # by the || true suffix.
+      - name: Commit unpacked source to branch
+        run: |
+          git config user.name "pp-pipeline[bot]"
+          git config user.email "pp-pipeline@ridgeline.com.au"
+          git add solutions/
+          git status
+          git diff --staged --quiet && echo "No changes to commit — source matches Development" || \
+            git commit -m "chore: export ${{ env.SOLUTION_NAME }} from Development [skip ci]"
+          git push origin HEAD:${{ github.head_ref }}
+
+      # ── Summary ───────────────────────────────────────────────────────────
+      - name: Post export summary
+        run: |
+          echo "## Export complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Solution:** \`${{ env.SOLUTION_NAME }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Source environment:** Development (\`${{ secrets.PP_DEV_URL }}\`)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Review the diff in this pull request before merging." >> $GITHUB_STEP_SUMMARY
+          echo "The release pipeline will run automatically on merge to main." >> $GITHUB_STEP_SUMMARY
+
+# ── Usage note ─────────────────────────────────────────────────────────────
+#
+# SOLUTION_NAME must match the exact schema name of the solution in the
+# Development environment (not the display name). To check: Power Platform
+# Admin Centre → Development environment → Solutions → [solution] → details.
+#
+# To support multiple solutions, copy this workflow file and change SOLUTION_NAME.
+# Each solution has its own export and release pipeline.
+#
+# The [skip ci] tag in the commit message prevents this commit from triggering
+# another pipeline run, which would cause an infinite loop.
