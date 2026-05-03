@@ -40,7 +40,7 @@ That pulled me toward consulting. I now work across solution design, business an
 
 ## Case Studies
 
-### [Room Booking — Platform Evaluation and Migration](./consulting-case-studies/01-room-booking-platform-migration/)
+### [Room Booking — Platform Evaluation and Migration](./consulting-case-studies/01-room-booking-system/)
 
 *Live engagement · Facilities Management / Co-working · Sydney*
 
@@ -102,6 +102,35 @@ Confidence-based routing for AI-augmented document handling. High-confidence ite
 
 ---
 
+## Power Platform Governance & ALM
+
+### [Ridgeline Partners — Governance and ALM Framework](./power-platform-governance/)
+
+*Designed engagement · Management Consulting · Sydney*
+
+A 220-person consulting firm's Power Platform maker culture had grown to 15 makers across four practice groups — until a bad solution import took down the firm's timesheet application on billing day. Designed and implemented a three-environment ring (Dev → Test → Production), a two-layer solution architecture separating shared Core components from practice-specific apps, GitHub Actions CI/CD pipelines using the `microsoft/powerplatform-actions` toolkit, Managed Environments with DLP connector policies, and an Entra ID-based maker access model with automated onboarding.
+
+`Power Platform ALM` `GitHub Actions` `Managed Environments` `DLP` `Entra ID` `PowerShell`
+
+---
+
+## Architecture Decision Records
+
+### [solution-decisions/](./solution-decisions/)
+
+Six structured ADRs across different engagements — each documenting the context, the options evaluated, and the rationale for the choice made. Covers platform selection, data layer trade-offs, AI routing patterns, and CI/CD tooling.
+
+| # | Decision |
+|---|---|
+| [001](./solution-decisions/001-react-over-power-apps-room-booking.md) | React over Power Apps for room booking |
+| [002](./solution-decisions/002-flat-file-over-database-phase-1.md) | Flat-file over database for Phase 1 |
+| [003](./solution-decisions/003-sharepoint-over-dataverse-clearpath.md) | SharePoint over Dataverse for healthcare intake |
+| [004](./solution-decisions/004-confidence-routing-document-processing.md) | Confidence-based routing for document processing |
+| [005](./solution-decisions/005-groq-over-openai-ba-tool.md) | Groq over OpenAI for BA tool |
+| [006](./solution-decisions/006-github-actions-over-azure-devops.md) | GitHub Actions over Azure DevOps for Power Platform ALM |
+
+---
+
 ## Solution Design and Process Work
 
 **[Truefield Aged Care — M365 Transformation](./solution-design-work/Truefield%20Aged%20Care/)** End-to-end solution design for a Microsoft 365 transformation: governance, information architecture, Teams deployment, change management.
@@ -118,8 +147,10 @@ Confidence-based routing for AI-augmented document handling. High-confidence ite
 - IBM - Exploratory Data Analysis for Machine Learning, Python for Data Science, AI and Development, Data Science Methodology, Tools for Data Science V2, Data Science Orientation,
 - Hubspot - Digital Advertising, Inbound Marketing, Content Marketing, Social Media Marketing, SEO, Digital Marketing.
 
+**Certified:**
+- AI-102: Azure AI Engineer Associate ✓ — April 2026
+
 **Currently working toward:**
-- AI-102: Azure AI Engineer Associate — exam booked April 2026
 - PL-200: Microsoft Power Platform Functional Consultant
 - PL-900: Microsoft Power Platform Fundamentals
 

@@ -10,7 +10,7 @@
 
 | # | Agent | Industry | Primary Problem | Key Technologies |
 |---|---|---|---|---|
-| 01 | Query AI Assistant (Findfield) | Financial Services | Customer policy queries taking 24–48hrs to resolve | RAG · Azure OpenAI · Bicep IaC · Python pipeline |
+| 01 | Query AI Assistant (Findfield) | Financial Services | Customer policy queries taking 24–48hrs to resolve | Copilot Studio · Azure OpenAI · SharePoint · Power Automate · Bicep IaC |
 | 02 | CareAssist Incident Agent | Aged Care | Clinical incidents not escalated within compliance timeframes | Copilot Studio · Power Automate · Teams · Azure OpenAI |
 | 03 | RetailIQ Sales Agent | Retail / eCommerce | Sales team overwhelmed by manual product and pricing queries | RAG · Copilot Studio · Teams · Power Automate · Bicep |
 | 04 | [AI Governance Advisory Agent](ai-governance-agent/) | Professional Services | AI governance questions bottlenecked through a small specialist team, no audit trail | Copilot Studio · Azure AI Search · Azure OpenAI · Power Automate · Python RAG |
@@ -27,7 +27,7 @@
 | Microsoft Teams channel | Partial | ✅ | ✅ | ✅ |
 | Power Automate escalation flows | Partial | ✅ | ✅ | ✅ |
 | Azure Bicep IaC | ✅ | ✅ | ✅ | — |
-| Python RAG pipeline | ✅ | — | — | ✅ |
+| Python RAG pipeline | — | — | — | ✅ |
 | Unit test suite | — | — | — | ✅ |
 | Audit logging (JSONL + SharePoint Graph API) | — | — | — | ✅ |
 | Regulatory / compliance design | — | ✅ | — | ✅ |
@@ -40,7 +40,9 @@
 
 ### 01 — Query AI Assistant
 
-The most technically deep artefact. A full Python RAG pipeline from document ingestion through to generation and evaluation. Demonstrates Azure SDK fluency, token-aware chunking, hybrid vector search, confidence routing, and production-grade thinking including the explicit gap between prototype and production.
+> **Implementation note:** Delivered via Microsoft Copilot Studio — no custom Python backend. For a direct Azure SDK RAG implementation, see [Agent 04](./ai-governance-agent/).
+
+A Copilot Studio agent handling customer policy queries for a mid-size financial services firm. Demonstrates multi-path routing (pre-built FAQ topics, generative answers grounded in SharePoint, confidence-threshold escalation), document preparation strategy for 400-document knowledge bases, structured conversation design, and the honest production gap between Copilot Studio's native connectors and a custom Azure AI Search pipeline.
 
 ### 02 — CareAssist Incident Agent
 
